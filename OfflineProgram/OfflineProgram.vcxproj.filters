@@ -214,9 +214,6 @@
     <EmbeddedResource Include="ModifyPointForm.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
-    <EmbeddedResource Include="Graph.resx">
-      <Filter>Resource Files</Filter>
-    </EmbeddedResource>
     <EmbeddedResource Include="AddNewProgram.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
@@ -240,10 +237,5 @@
     <ResourceCompile Include="OfflineProgram.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Image File\mechanical_arm_uHJ_icon.ico">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
