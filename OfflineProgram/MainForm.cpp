@@ -1,6 +1,3 @@
-// Test the change
-
-
 #include "MainForm.h"
 #include "AddWait.h"
 #include "AddMovePoint.h"
