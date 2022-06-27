@@ -1,5 +1,5 @@
 // Add new line command
-//TEST~
+
 #include "MainForm.h"
 #include "AddWait.h"
 #include "AddMovePoint.h"
