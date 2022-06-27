@@ -1,4 +1,5 @@
 // Add new line command
+// I have add new comment
 
 #include "MainForm.h"
 #include "AddWait.h"
