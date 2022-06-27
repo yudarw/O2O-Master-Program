@@ -763,7 +763,7 @@ void thread_simTeleoperation(void *) {
 			// Output of the slave Cartesian Controller:
 			Xcs = Xs + Fcs;
 
-			set_graph_data(Fcm[0], Fcm[1], Fcm[2], "Fx", "Fy", "Fz");
+			//set_graph_data(Fcm[0], Fcm[1], Fcm[2], "Fx", "Fy", "Fz");
 
 			// Action controller
 			setHapticForces(Fcm);
@@ -1004,7 +1004,7 @@ void thread_impedance(void *) {
 		if (abs(haptic_feedback_force[1]) < 0.6) haptic_feedback_force[1] = 0;
 		if (abs(haptic_feedback_force[2]) < 0.6) haptic_feedback_force[2] = 0;
 
-		set_graph_data(f[0], f[1], f[2], "Fx", "Fy", "Fz");
+		//set_graph_data(f[0], f[1], f[2], "Fx", "Fy", "Fz");
 		Sleep(1);
 	}
 }

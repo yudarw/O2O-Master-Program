@@ -72,9 +72,6 @@
     <ClCompile Include="HapticTeleoperationForm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Graph.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="AddNewProgram.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -158,9 +155,6 @@
     <ClInclude Include="HapticTeleoperationForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graph.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AddNewProgram.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -236,6 +230,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="HapticSettingForm.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoppeliaForm1.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

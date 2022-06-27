@@ -157,7 +157,6 @@
     <ClCompile Include="frrobotiflib.cpp" />
     <ClCompile Include="GlobalVariable.cpp" />
     <ClCompile Include="GPIOForm.cpp" />
-    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="HapticSettingForm.cpp" />
     <ClCompile Include="HapticTeleoperationForm.cpp" />
     <ClCompile Include="HomogeneousTransform.cpp" />
@@ -201,9 +200,6 @@
     <ClInclude Include="frrobotiflib.h" />
     <ClInclude Include="GlobalVariable.h" />
     <ClInclude Include="GPIOForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="Graph.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="HapticSettingForm.h">
@@ -257,9 +253,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GPIOForm.resx">
       <DependentUpon>GPIOForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Graph.resx">
-      <DependentUpon>Graph.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HapticSettingForm.resx">
       <DependentUpon>HapticSettingForm.h</DependentUpon>

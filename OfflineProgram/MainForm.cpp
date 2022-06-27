@@ -1,4 +1,5 @@
-// This is the updated version of the program
+// Test the change
+
 
 #include "MainForm.h"
 #include "AddWait.h"
@@ -10,13 +11,13 @@
 #include "AddCommentForm.h"
 #include "SettingForm.h"
 #include "GPIOForm.h"
-#include "Graph.h"
 #include "HapticTeleoperationForm.h"
 #include "HapticSettingForm.h"
 #include "TrajectoryCalibrationForm.h"
 #include "AddOfflineTrajectory.h"
 #include "CoppeliaForm1.h"
 #include "GlobalVariable.h"
+
 
 using namespace System;
 using namespace System::IO;
@@ -925,10 +926,7 @@ void MainForm::btn_moveTo_standby_pos() {
 
 // -- Show the graph data --
 void MainForm::btn_show_graph() {
-	if (isFormOpened("Graph") == false) {
-		Graph ^ form = gcnew Graph;
-		form->Show(this);
-	}
+
 }
 
 // -- Set Servo Power --
