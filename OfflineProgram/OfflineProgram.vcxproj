@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2FAF3B1C-4125-4D46-BF56-702FAF9E242E}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>OfflineProgram</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v100</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;NON_MATLAB_PARSING;MAX_EXT_API_CONNECTIONS=255;_CRT_SECURE_NO_WARNINGS;DO_NOT_USE_SHARED_MEMORY;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\yudarw\AppData\Roaming\Python\Python310\site-packages\numpy\core\include;C:\Program Files %28x86%29\Python310-32\include;C:\Program Files\CoppeliaRobotics\CoppeliaSimEdu\programming\include;C:\OpenHaptics\Developer\3.4.0\utilities\include;C:\OpenHaptics\Developer\3.4.0\Quickhaptics\header;C:\OpenHaptics\Developer\3.4.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>hd.lib;hdu.lib;hl.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Python310-32\libs;C:\OpenHaptics\Developer\3.4.0\utilities\lib\Win32\Release;C:\OpenHaptics\Developer\3.4.0\Quickhaptics\lib\Win32\Release;C:\OpenHaptics\Developer\3.4.0\lib\Win32\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="netchartdir">
+      <HintPath>C:\chartdir_net\ChartDirector\lib\netchartdir.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AddCommentForm.cpp" />
+    <ClCompile Include="AddMovePoint.cpp" />
+    <ClCompile Include="AddNewProgram.cpp" />
+    <ClCompile Include="AddOfflineTrajectory.cpp" />
+    <ClCompile Include="AddWait.cpp" />
+    <ClCompile Include="CoppeliaForm1.cpp" />
+    <ClCompile Include="coppeliasim.cpp" />
+    <ClCompile Include="extApi.cpp" />
+    <ClCompile Include="extApiPlatform.cpp" />
+    <ClCompile Include="Fanuc.cpp" />
+    <ClCompile Include="frrjif.cpp" />
+    <ClCompile Include="frrobotiflib.cpp" />
+    <ClCompile Include="GlobalVariable.cpp" />
+    <ClCompile Include="GPIOForm.cpp" />
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="HapticSettingForm.cpp" />
+    <ClCompile Include="HapticTeleoperationForm.cpp" />
+    <ClCompile Include="HomogeneousTransform.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainForm.cpp" />
+    <ClCompile Include="ModifyPointForm.cpp" />
+    <ClCompile Include="OpenHaptic.cpp" />
+    <ClCompile Include="RecordForm.cpp" />
+    <ClCompile Include="SettingForm.cpp" />
+    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="StatusForm.cpp" />
+    <ClCompile Include="TrajectoryCalibrationForm.cpp" />
+    <ClCompile Include="Wacoh.cpp" />
+    <ClCompile Include="Yaskawa.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddCommentForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddMovePoint.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddNewProgram.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddOfflineTrajectory.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AddWait.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CoppeliaForm1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="coppeliasim.h" />
+    <ClInclude Include="extApi.h" />
+    <ClInclude Include="extApiInternal.h" />
+    <ClInclude Include="extApiPlatform.h" />
+    <ClInclude Include="Fanuc.h" />
+    <ClInclude Include="frrjif.h" />
+    <ClInclude Include="frrobotiflib.h" />
+    <ClInclude Include="GlobalVariable.h" />
+    <ClInclude Include="GPIOForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Graph.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="HapticSettingForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="HapticTeleoperationForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="HomogeneousTransform.h" />
+    <ClInclude Include="MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ModifyPointForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="OpenHaptic.h" />
+    <ClInclude Include="RecordForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SettingForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="StatusForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TrajectoryCalibrationForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Wacoh.h" />
+    <ClInclude Include="Yaskawa.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddCommentForm.resx">
+      <DependentUpon>AddCommentForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMovePoint.resx">
+      <DependentUpon>AddMovePoint.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewProgram.resx">
+      <DependentUpon>AddNewProgram.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOfflineTrajectory.resx">
+      <DependentUpon>AddOfflineTrajectory.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWait.resx">
+      <DependentUpon>AddWait.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoppeliaForm1.resx">
+      <DependentUpon>CoppeliaForm1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GPIOForm.resx">
+      <DependentUpon>GPIOForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Graph.resx">
+      <DependentUpon>Graph.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapticSettingForm.resx">
+      <DependentUpon>HapticSettingForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapticTeleoperationForm.resx">
+      <DependentUpon>HapticTeleoperationForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifyPointForm.resx">
+      <DependentUpon>ModifyPointForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecordForm.resx">
+      <DependentUpon>RecordForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.resx">
+      <DependentUpon>SettingForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusForm.resx">
+      <DependentUpon>StatusForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrajectoryCalibrationForm.resx">
+      <DependentUpon>TrajectoryCalibrationForm.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OfflineProgram.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Image File\mechanical_arm_uHJ_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

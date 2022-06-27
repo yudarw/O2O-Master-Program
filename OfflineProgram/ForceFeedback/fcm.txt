@@ -1,0 +1,64 @@
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
+X_value, Y_value, Z_value
+0,0,0
