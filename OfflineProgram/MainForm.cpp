@@ -1,3 +1,5 @@
+// This is the updated version of the program
+
 #include "MainForm.h"
 #include "AddWait.h"
 #include "AddMovePoint.h"
