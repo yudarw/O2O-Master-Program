@@ -1,6 +1,5 @@
 // Add new line command
-// I have add new comment
-
+//TEST~
 #include "MainForm.h"
 #include "AddWait.h"
 #include "AddMovePoint.h"
