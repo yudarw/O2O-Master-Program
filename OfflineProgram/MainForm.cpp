@@ -1,7 +1,3 @@
-// Add new line command
-// TEST~
-// Update files 
-
 #include "MainForm.h"
 #include "AddWait.h"
 #include "AddMovePoint.h"
