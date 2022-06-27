@@ -474,6 +474,7 @@ protected:
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->groupBox11 = (gcnew System::Windows::Forms::GroupBox());
+			this->button43 = (gcnew System::Windows::Forms::Button());
 			this->button41 = (gcnew System::Windows::Forms::Button());
 			this->button22 = (gcnew System::Windows::Forms::Button());
 			this->groupBox9 = (gcnew System::Windows::Forms::GroupBox());
@@ -508,7 +509,6 @@ protected:
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->saveFileDialog1 = (gcnew System::Windows::Forms::SaveFileDialog());
-			this->button43 = (gcnew System::Windows::Forms::Button());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox15->SuspendLayout();
@@ -595,11 +595,11 @@ protected:
 			this->tableLayoutPanel9->Controls->Add(this->button17, 1, 0);
 			this->tableLayoutPanel9->Controls->Add(this->button13, 2, 0);
 			this->tableLayoutPanel9->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel9->Location = System::Drawing::Point(3, 17);
+			this->tableLayoutPanel9->Location = System::Drawing::Point(3, 20);
 			this->tableLayoutPanel9->Name = L"tableLayoutPanel9";
 			this->tableLayoutPanel9->RowCount = 1;
 			this->tableLayoutPanel9->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel9->Size = System::Drawing::Size(277, 86);
+			this->tableLayoutPanel9->Size = System::Drawing::Size(277, 83);
 			this->tableLayoutPanel9->TabIndex = 0;
 			// 
 			// button18
@@ -611,7 +611,7 @@ protected:
 			this->button18->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button18->Location = System::Drawing::Point(3, 3);
 			this->button18->Name = L"button18";
-			this->button18->Size = System::Drawing::Size(86, 80);
+			this->button18->Size = System::Drawing::Size(86, 77);
 			this->button18->TabIndex = 8;
 			this->button18->Text = L"Modify";
 			this->button18->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -627,7 +627,7 @@ protected:
 			this->button17->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button17->Location = System::Drawing::Point(95, 3);
 			this->button17->Name = L"button17";
-			this->button17->Size = System::Drawing::Size(86, 80);
+			this->button17->Size = System::Drawing::Size(86, 77);
 			this->button17->TabIndex = 7;
 			this->button17->Text = L"Insert";
 			this->button17->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -643,7 +643,7 @@ protected:
 			this->button13->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button13->Location = System::Drawing::Point(187, 3);
 			this->button13->Name = L"button13";
-			this->button13->Size = System::Drawing::Size(87, 80);
+			this->button13->Size = System::Drawing::Size(87, 77);
 			this->button13->TabIndex = 6;
 			this->button13->Text = L"Delete";
 			this->button13->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -673,11 +673,11 @@ protected:
 			this->tableLayoutPanel8->Controls->Add(this->button37, 0, 0);
 			this->tableLayoutPanel8->Controls->Add(this->button39, 2, 0);
 			this->tableLayoutPanel8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel8->Location = System::Drawing::Point(3, 17);
+			this->tableLayoutPanel8->Location = System::Drawing::Point(3, 20);
 			this->tableLayoutPanel8->Name = L"tableLayoutPanel8";
 			this->tableLayoutPanel8->RowCount = 1;
 			this->tableLayoutPanel8->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel8->Size = System::Drawing::Size(277, 86);
+			this->tableLayoutPanel8->Size = System::Drawing::Size(277, 83);
 			this->tableLayoutPanel8->TabIndex = 0;
 			// 
 			// button40
@@ -689,7 +689,7 @@ protected:
 			this->button40->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button40->Location = System::Drawing::Point(95, 3);
 			this->button40->Name = L"button40";
-			this->button40->Size = System::Drawing::Size(86, 80);
+			this->button40->Size = System::Drawing::Size(86, 77);
 			this->button40->TabIndex = 17;
 			this->button40->Text = L"Speed +";
 			this->button40->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -705,7 +705,7 @@ protected:
 			this->button37->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button37->Location = System::Drawing::Point(3, 3);
 			this->button37->Name = L"button37";
-			this->button37->Size = System::Drawing::Size(86, 80);
+			this->button37->Size = System::Drawing::Size(86, 77);
 			this->button37->TabIndex = 16;
 			this->button37->Text = L"Speed -";
 			this->button37->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -721,7 +721,7 @@ protected:
 			this->button39->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button39->Location = System::Drawing::Point(187, 3);
 			this->button39->Name = L"button39";
-			this->button39->Size = System::Drawing::Size(87, 80);
+			this->button39->Size = System::Drawing::Size(87, 77);
 			this->button39->TabIndex = 15;
 			this->button39->Text = L"Move To";
 			this->button39->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -751,11 +751,11 @@ protected:
 			this->tableLayoutPanel7->Controls->Add(this->button24, 0, 0);
 			this->tableLayoutPanel7->Controls->Add(this->button26, 1, 0);
 			this->tableLayoutPanel7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel7->Location = System::Drawing::Point(3, 17);
+			this->tableLayoutPanel7->Location = System::Drawing::Point(3, 20);
 			this->tableLayoutPanel7->Name = L"tableLayoutPanel7";
 			this->tableLayoutPanel7->RowCount = 1;
 			this->tableLayoutPanel7->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel7->Size = System::Drawing::Size(278, 89);
+			this->tableLayoutPanel7->Size = System::Drawing::Size(278, 86);
 			this->tableLayoutPanel7->TabIndex = 0;
 			// 
 			// button23
@@ -767,7 +767,7 @@ protected:
 			this->button23->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button23->Location = System::Drawing::Point(187, 3);
 			this->button23->Name = L"button23";
-			this->button23->Size = System::Drawing::Size(88, 83);
+			this->button23->Size = System::Drawing::Size(88, 80);
 			this->button23->TabIndex = 11;
 			this->button23->Text = L"New";
 			this->button23->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -783,7 +783,7 @@ protected:
 			this->button24->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button24->Location = System::Drawing::Point(3, 3);
 			this->button24->Name = L"button24";
-			this->button24->Size = System::Drawing::Size(86, 83);
+			this->button24->Size = System::Drawing::Size(86, 80);
 			this->button24->TabIndex = 9;
 			this->button24->Text = L"Open";
 			this->button24->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -799,7 +799,7 @@ protected:
 			this->button26->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button26->Location = System::Drawing::Point(95, 3);
 			this->button26->Name = L"button26";
-			this->button26->Size = System::Drawing::Size(86, 83);
+			this->button26->Size = System::Drawing::Size(86, 80);
 			this->button26->TabIndex = 10;
 			this->button26->Text = L"Save";
 			this->button26->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -838,12 +838,12 @@ protected:
 			this->tableLayoutPanel3->Controls->Add(this->button2, 3, 1);
 			this->tableLayoutPanel3->Controls->Add(this->button19, 4, 0);
 			this->tableLayoutPanel3->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel3->Location = System::Drawing::Point(3, 17);
+			this->tableLayoutPanel3->Location = System::Drawing::Point(3, 20);
 			this->tableLayoutPanel3->Name = L"tableLayoutPanel3";
 			this->tableLayoutPanel3->RowCount = 2;
 			this->tableLayoutPanel3->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
 			this->tableLayoutPanel3->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel3->Size = System::Drawing::Size(777, 141);
+			this->tableLayoutPanel3->Size = System::Drawing::Size(777, 138);
 			this->tableLayoutPanel3->TabIndex = 0;
 			// 
 			// button21
@@ -853,9 +853,9 @@ protected:
 			this->button21->Enabled = false;
 			this->button21->ForeColor = System::Drawing::Color::Black;
 			this->button21->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button21.Image")));
-			this->button21->Location = System::Drawing::Point(623, 73);
+			this->button21->Location = System::Drawing::Point(623, 72);
 			this->button21->Name = L"button21";
-			this->button21->Size = System::Drawing::Size(151, 65);
+			this->button21->Size = System::Drawing::Size(151, 63);
 			this->button21->TabIndex = 11;
 			this->button21->Text = L"Wait";
 			this->button21->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -870,7 +870,7 @@ protected:
 			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
 			this->button1->Location = System::Drawing::Point(3, 3);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(149, 64);
+			this->button1->Size = System::Drawing::Size(149, 63);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Add Move Point";
 			this->button1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -885,7 +885,7 @@ protected:
 			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
 			this->button6->Location = System::Drawing::Point(158, 3);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(149, 64);
+			this->button6->Size = System::Drawing::Size(149, 63);
 			this->button6->TabIndex = 3;
 			this->button6->Text = L"Add Offline Trajectory";
 			this->button6->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -900,7 +900,7 @@ protected:
 			this->button3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.Image")));
 			this->button3->Location = System::Drawing::Point(313, 3);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(149, 64);
+			this->button3->Size = System::Drawing::Size(149, 63);
 			this->button3->TabIndex = 5;
 			this->button3->Text = L"   I/O";
 			this->button3->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -916,7 +916,7 @@ protected:
 			this->button20->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button20.Image")));
 			this->button20->Location = System::Drawing::Point(468, 3);
 			this->button20->Name = L"button20";
-			this->button20->Size = System::Drawing::Size(149, 64);
+			this->button20->Size = System::Drawing::Size(149, 63);
 			this->button20->TabIndex = 10;
 			this->button20->Text = L"If...else...";
 			this->button20->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -928,9 +928,9 @@ protected:
 			this->button2->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->button2->ForeColor = System::Drawing::Color::Black;
 			this->button2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.Image")));
-			this->button2->Location = System::Drawing::Point(468, 73);
+			this->button2->Location = System::Drawing::Point(468, 72);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(149, 65);
+			this->button2->Size = System::Drawing::Size(149, 63);
 			this->button2->TabIndex = 4;
 			this->button2->Text = L"Comment";
 			this->button2->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -946,7 +946,7 @@ protected:
 			this->button19->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button19.Image")));
 			this->button19->Location = System::Drawing::Point(623, 3);
 			this->button19->Name = L"button19";
-			this->button19->Size = System::Drawing::Size(151, 64);
+			this->button19->Size = System::Drawing::Size(151, 63);
 			this->button19->TabIndex = 9;
 			this->button19->Text = L"Loop";
 			this->button19->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -995,7 +995,7 @@ protected:
 			this->Column1->Name = L"Column1";
 			this->Column1->ReadOnly = true;
 			this->Column1->Resizable = System::Windows::Forms::DataGridViewTriState::False;
-			this->Column1->Width = 71;
+			this->Column1->Width = 86;
 			// 
 			// INSTRUCTION
 			// 
@@ -1059,12 +1059,12 @@ protected:
 			this->tableLayoutPanel5->Controls->Add(this->button25, 1, 0);
 			this->tableLayoutPanel5->Controls->Add(this->button12, 0, 1);
 			this->tableLayoutPanel5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel5->Location = System::Drawing::Point(3, 17);
+			this->tableLayoutPanel5->Location = System::Drawing::Point(3, 20);
 			this->tableLayoutPanel5->Name = L"tableLayoutPanel5";
 			this->tableLayoutPanel5->RowCount = 2;
 			this->tableLayoutPanel5->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
 			this->tableLayoutPanel5->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel5->Size = System::Drawing::Size(293, 171);
+			this->tableLayoutPanel5->Size = System::Drawing::Size(293, 168);
 			this->tableLayoutPanel5->TabIndex = 0;
 			// 
 			// button14
@@ -1076,7 +1076,7 @@ protected:
 			this->button14->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button14->Location = System::Drawing::Point(197, 3);
 			this->button14->Name = L"button14";
-			this->button14->Size = System::Drawing::Size(93, 79);
+			this->button14->Size = System::Drawing::Size(93, 78);
 			this->button14->TabIndex = 14;
 			this->button14->Text = L"Modify";
 			this->button14->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1092,7 +1092,7 @@ protected:
 			this->button31->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button31->Location = System::Drawing::Point(3, 3);
 			this->button31->Name = L"button31";
-			this->button31->Size = System::Drawing::Size(91, 79);
+			this->button31->Size = System::Drawing::Size(91, 78);
 			this->button31->TabIndex = 12;
 			this->button31->Text = L"Add";
 			this->button31->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1108,7 +1108,7 @@ protected:
 			this->button25->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button25->Location = System::Drawing::Point(100, 3);
 			this->button25->Name = L"button25";
-			this->button25->Size = System::Drawing::Size(91, 79);
+			this->button25->Size = System::Drawing::Size(91, 78);
 			this->button25->TabIndex = 13;
 			this->button25->Text = L"Delete";
 			this->button25->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1122,9 +1122,9 @@ protected:
 			this->button12->ForeColor = System::Drawing::Color::Black;
 			this->button12->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button12.Image")));
 			this->button12->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button12->Location = System::Drawing::Point(3, 88);
+			this->button12->Location = System::Drawing::Point(3, 87);
 			this->button12->Name = L"button12";
-			this->button12->Size = System::Drawing::Size(91, 80);
+			this->button12->Size = System::Drawing::Size(91, 78);
 			this->button12->TabIndex = 19;
 			this->button12->Text = L"Replace";
 			this->button12->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1154,11 +1154,11 @@ protected:
 			this->tableLayoutPanel6->Controls->Add(this->button32, 2, 0);
 			this->tableLayoutPanel6->Controls->Add(this->button34, 1, 0);
 			this->tableLayoutPanel6->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel6->Location = System::Drawing::Point(3, 17);
+			this->tableLayoutPanel6->Location = System::Drawing::Point(3, 20);
 			this->tableLayoutPanel6->Name = L"tableLayoutPanel6";
 			this->tableLayoutPanel6->RowCount = 1;
 			this->tableLayoutPanel6->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel6->Size = System::Drawing::Size(293, 86);
+			this->tableLayoutPanel6->Size = System::Drawing::Size(293, 83);
 			this->tableLayoutPanel6->TabIndex = 0;
 			// 
 			// button33
@@ -1170,7 +1170,7 @@ protected:
 			this->button33->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button33->Location = System::Drawing::Point(3, 3);
 			this->button33->Name = L"button33";
-			this->button33->Size = System::Drawing::Size(91, 80);
+			this->button33->Size = System::Drawing::Size(91, 77);
 			this->button33->TabIndex = 16;
 			this->button33->Text = L"Prev";
 			this->button33->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1186,7 +1186,7 @@ protected:
 			this->button32->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button32->Location = System::Drawing::Point(197, 3);
 			this->button32->Name = L"button32";
-			this->button32->Size = System::Drawing::Size(93, 80);
+			this->button32->Size = System::Drawing::Size(93, 77);
 			this->button32->TabIndex = 15;
 			this->button32->Text = L"Move To";
 			this->button32->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1202,7 +1202,7 @@ protected:
 			this->button34->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button34->Location = System::Drawing::Point(100, 3);
 			this->button34->Name = L"button34";
-			this->button34->Size = System::Drawing::Size(91, 80);
+			this->button34->Size = System::Drawing::Size(91, 77);
 			this->button34->TabIndex = 17;
 			this->button34->Text = L"Next";
 			this->button34->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1235,12 +1235,12 @@ protected:
 			this->tableLayoutPanel4->Controls->Add(this->buttonLoad, 0, 0);
 			this->tableLayoutPanel4->Controls->Add(this->button15, 1, 0);
 			this->tableLayoutPanel4->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel4->Location = System::Drawing::Point(3, 17);
+			this->tableLayoutPanel4->Location = System::Drawing::Point(3, 20);
 			this->tableLayoutPanel4->Name = L"tableLayoutPanel4";
 			this->tableLayoutPanel4->RowCount = 2;
 			this->tableLayoutPanel4->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
 			this->tableLayoutPanel4->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
-			this->tableLayoutPanel4->Size = System::Drawing::Size(293, 171);
+			this->tableLayoutPanel4->Size = System::Drawing::Size(293, 168);
 			this->tableLayoutPanel4->TabIndex = 0;
 			// 
 			// button5
@@ -1250,9 +1250,9 @@ protected:
 			this->button5->ForeColor = System::Drawing::Color::Black;
 			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
 			this->button5->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button5->Location = System::Drawing::Point(197, 88);
+			this->button5->Location = System::Drawing::Point(197, 87);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(93, 80);
+			this->button5->Size = System::Drawing::Size(93, 78);
 			this->button5->TabIndex = 19;
 			this->button5->Text = L"Calibrate";
 			this->button5->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1266,9 +1266,9 @@ protected:
 			this->button4->ForeColor = System::Drawing::Color::Black;
 			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
 			this->button4->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button4->Location = System::Drawing::Point(3, 88);
+			this->button4->Location = System::Drawing::Point(3, 87);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(91, 80);
+			this->button4->Size = System::Drawing::Size(91, 78);
 			this->button4->TabIndex = 16;
 			this->button4->Text = L"Record";
 			this->button4->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1282,9 +1282,9 @@ protected:
 			this->button16->ForeColor = System::Drawing::Color::Black;
 			this->button16->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button16.Image")));
 			this->button16->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button16->Location = System::Drawing::Point(100, 88);
+			this->button16->Location = System::Drawing::Point(100, 87);
 			this->button16->Name = L"button16";
-			this->button16->Size = System::Drawing::Size(91, 80);
+			this->button16->Size = System::Drawing::Size(91, 78);
 			this->button16->TabIndex = 15;
 			this->button16->Text = L"Set Origin";
 			this->button16->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1300,7 +1300,7 @@ protected:
 			this->button30->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button30->Location = System::Drawing::Point(197, 3);
 			this->button30->Name = L"button30";
-			this->button30->Size = System::Drawing::Size(93, 79);
+			this->button30->Size = System::Drawing::Size(93, 78);
 			this->button30->TabIndex = 11;
 			this->button30->Text = L"New";
 			this->button30->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1316,7 +1316,7 @@ protected:
 			this->buttonLoad->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->buttonLoad->Location = System::Drawing::Point(3, 3);
 			this->buttonLoad->Name = L"buttonLoad";
-			this->buttonLoad->Size = System::Drawing::Size(91, 79);
+			this->buttonLoad->Size = System::Drawing::Size(91, 78);
 			this->buttonLoad->TabIndex = 9;
 			this->buttonLoad->Text = L"Open";
 			this->buttonLoad->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1332,7 +1332,7 @@ protected:
 			this->button15->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
 			this->button15->Location = System::Drawing::Point(100, 3);
 			this->button15->Name = L"button15";
-			this->button15->Size = System::Drawing::Size(91, 79);
+			this->button15->Size = System::Drawing::Size(91, 78);
 			this->button15->TabIndex = 10;
 			this->button15->Text = L"Save";
 			this->button15->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
@@ -1367,12 +1367,12 @@ protected:
 					this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8
 			});
 			this->dataGridView2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->dataGridView2->Location = System::Drawing::Point(3, 17);
+			this->dataGridView2->Location = System::Drawing::Point(3, 20);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
 			this->dataGridView2->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::DisableResizing;
 			this->dataGridView2->RowTemplate->Height = 24;
-			this->dataGridView2->Size = System::Drawing::Size(764, 671);
+			this->dataGridView2->Size = System::Drawing::Size(764, 668);
 			this->dataGridView2->TabIndex = 2;
 			this->dataGridView2->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MainForm::dataGridView2_CellClick);
 			this->dataGridView2->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MainForm::dataGridView2_CellContentClick);
@@ -1486,6 +1486,21 @@ protected:
 			this->groupBox11->TabIndex = 19;
 			this->groupBox11->TabStop = false;
 			this->groupBox11->Text = L"SETIING";
+			// 
+			// button43
+			// 
+			this->button43->BackColor = System::Drawing::Color::Transparent;
+			this->button43->ForeColor = System::Drawing::Color::Black;
+			this->button43->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button43.Image")));
+			this->button43->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->button43->Location = System::Drawing::Point(30, 199);
+			this->button43->Name = L"button43";
+			this->button43->Size = System::Drawing::Size(146, 72);
+			this->button43->TabIndex = 16;
+			this->button43->Text = L"Haptic Connect";
+			this->button43->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
+			this->button43->UseVisualStyleBackColor = false;
+			this->button43->Click += gcnew System::EventHandler(this, &MainForm::button43_Click);
 			// 
 			// button41
 			// 
@@ -1816,7 +1831,7 @@ protected:
 			this->label_alarm->ForeColor = System::Drawing::Color::White;
 			this->label_alarm->Location = System::Drawing::Point(14, 8);
 			this->label_alarm->Name = L"label_alarm";
-			this->label_alarm->Size = System::Drawing::Size(53, 15);
+			this->label_alarm->Size = System::Drawing::Size(63, 18);
 			this->label_alarm->TabIndex = 0;
 			this->label_alarm->Text = L"ALARM";
 			// 
@@ -1828,7 +1843,7 @@ protected:
 			this->label3->ForeColor = System::Drawing::Color::Aqua;
 			this->label3->Location = System::Drawing::Point(9, 6);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(297, 24);
+			this->label3->Size = System::Drawing::Size(370, 29);
 			this->label3->TabIndex = 5;
 			this->label3->Text = L"O2O SOFTWARE INTERFACE";
 			// 
@@ -1838,9 +1853,9 @@ protected:
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::White;
-			this->label2->Location = System::Drawing::Point(565, 10);
+			this->label2->Location = System::Drawing::Point(544, 12);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(57, 15);
+			this->label2->Size = System::Drawing::Size(69, 18);
 			this->label2->TabIndex = 4;
 			this->label2->Text = L"SPEED:";
 			// 
@@ -1852,7 +1867,7 @@ protected:
 			this->label_speed_ratio->ForeColor = System::Drawing::Color::Lime;
 			this->label_speed_ratio->Location = System::Drawing::Point(619, 6);
 			this->label_speed_ratio->Name = L"label_speed_ratio";
-			this->label_speed_ratio->Size = System::Drawing::Size(59, 24);
+			this->label_speed_ratio->Size = System::Drawing::Size(78, 29);
 			this->label_speed_ratio->TabIndex = 1;
 			this->label_speed_ratio->Text = L"100%";
 			// 
@@ -1875,7 +1890,7 @@ protected:
 			this->label13->ForeColor = System::Drawing::Color::White;
 			this->label13->Location = System::Drawing::Point(9, 8);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(54, 15);
+			this->label13->Size = System::Drawing::Size(67, 18);
 			this->label13->TabIndex = 0;
 			this->label13->Text = L"ROBOT";
 			// 
@@ -1898,7 +1913,7 @@ protected:
 			this->label12->ForeColor = System::Drawing::Color::White;
 			this->label12->Location = System::Drawing::Point(9, 8);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(55, 15);
+			this->label12->Size = System::Drawing::Size(67, 18);
 			this->label12->TabIndex = 0;
 			this->label12->Text = L"HAPTIC";
 			// 
@@ -1920,7 +1935,7 @@ protected:
 			this->label11->ForeColor = System::Drawing::Color::White;
 			this->label11->Location = System::Drawing::Point(9, 8);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(88, 15);
+			this->label11->Size = System::Drawing::Size(108, 18);
 			this->label11->TabIndex = 0;
 			this->label11->Text = L"F/T SENSOR";
 			// 
@@ -1934,24 +1949,9 @@ protected:
 			// 
 			this->openFileDialog1->FileName = L"openFileDialog1";
 			// 
-			// button43
-			// 
-			this->button43->BackColor = System::Drawing::Color::Transparent;
-			this->button43->ForeColor = System::Drawing::Color::Black;
-			this->button43->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button43.Image")));
-			this->button43->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button43->Location = System::Drawing::Point(30, 199);
-			this->button43->Name = L"button43";
-			this->button43->Size = System::Drawing::Size(146, 72);
-			this->button43->TabIndex = 16;
-			this->button43->Text = L"Haptic Connect";
-			this->button43->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
-			this->button43->UseVisualStyleBackColor = false;
-			this->button43->Click += gcnew System::EventHandler(this, &MainForm::button43_Click);
-			// 
 			// MainForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(7, 15);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 18);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
