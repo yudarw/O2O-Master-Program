@@ -1008,3 +1008,18 @@ void MainForm::show_coppeliasim() {
 		form->Show(this);
 	}
 }
+
+void MainForm::btn_haptic_connect() {
+	// Connect the haptic device
+	if (!haptic.connected) {
+		if (haptic.init() == -1) {
+			System::Windows::Forms::MessageBox::Show(
+				"Haptic connection failed!",
+				"Connection error",
+				MessageBoxButtons::OK,
+				MessageBoxIcon::Error
+			);
+			return;
+		}
+	}
+}

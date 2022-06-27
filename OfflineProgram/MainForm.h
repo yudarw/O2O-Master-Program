@@ -261,6 +261,7 @@ private: System::Windows::Forms::Panel^  indicator_alarm;
 private: System::Windows::Forms::Label^  label_alarm;
 private: System::Windows::Forms::Button^  button11;
 private: System::Windows::Forms::Button^  button42;
+private: System::Windows::Forms::Button^  button43;
 
 
 
@@ -351,6 +352,7 @@ private: System::Windows::Forms::Button^  button42;
 		void btn_test();
 
 		void show_coppeliasim();
+		void btn_haptic_connect();
 		
 
 	protected:
@@ -468,6 +470,7 @@ protected:
 			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox12 = (gcnew System::Windows::Forms::GroupBox());
+			this->button42 = (gcnew System::Windows::Forms::Button());
 			this->button11 = (gcnew System::Windows::Forms::Button());
 			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->groupBox11 = (gcnew System::Windows::Forms::GroupBox());
@@ -505,7 +508,7 @@ protected:
 			this->timer2 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->openFileDialog1 = (gcnew System::Windows::Forms::OpenFileDialog());
 			this->saveFileDialog1 = (gcnew System::Windows::Forms::SaveFileDialog());
-			this->button42 = (gcnew System::Windows::Forms::Button());
+			this->button43 = (gcnew System::Windows::Forms::Button());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->groupBox15->SuspendLayout();
@@ -1442,6 +1445,16 @@ protected:
 			this->groupBox12->TabIndex = 20;
 			this->groupBox12->TabStop = false;
 			// 
+			// button42
+			// 
+			this->button42->Location = System::Drawing::Point(13, 153);
+			this->button42->Name = L"button42";
+			this->button42->Size = System::Drawing::Size(140, 23);
+			this->button42->TabIndex = 4;
+			this->button42->Text = L"Coopelia Sim";
+			this->button42->UseVisualStyleBackColor = true;
+			this->button42->Click += gcnew System::EventHandler(this, &MainForm::button42_Click);
+			// 
 			// button11
 			// 
 			this->button11->Location = System::Drawing::Point(13, 101);
@@ -1464,6 +1477,7 @@ protected:
 			// 
 			// groupBox11
 			// 
+			this->groupBox11->Controls->Add(this->button43);
 			this->groupBox11->Controls->Add(this->button41);
 			this->groupBox11->Controls->Add(this->button22);
 			this->groupBox11->Location = System::Drawing::Point(875, 3);
@@ -1920,15 +1934,20 @@ protected:
 			// 
 			this->openFileDialog1->FileName = L"openFileDialog1";
 			// 
-			// button42
+			// button43
 			// 
-			this->button42->Location = System::Drawing::Point(13, 153);
-			this->button42->Name = L"button42";
-			this->button42->Size = System::Drawing::Size(140, 23);
-			this->button42->TabIndex = 4;
-			this->button42->Text = L"Coopelia Sim";
-			this->button42->UseVisualStyleBackColor = true;
-			this->button42->Click += gcnew System::EventHandler(this, &MainForm::button42_Click);
+			this->button43->BackColor = System::Drawing::Color::Transparent;
+			this->button43->ForeColor = System::Drawing::Color::Black;
+			this->button43->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button43.Image")));
+			this->button43->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
+			this->button43->Location = System::Drawing::Point(30, 199);
+			this->button43->Name = L"button43";
+			this->button43->Size = System::Drawing::Size(146, 72);
+			this->button43->TabIndex = 16;
+			this->button43->Text = L"Haptic Connect";
+			this->button43->TextAlign = System::Drawing::ContentAlignment::BottomCenter;
+			this->button43->UseVisualStyleBackColor = false;
+			this->button43->Click += gcnew System::EventHandler(this, &MainForm::button43_Click);
 			// 
 			// MainForm
 			// 
@@ -2175,6 +2194,9 @@ private: System::Void button11_Click_1(System::Object^  sender, System::EventArg
 }
 private: System::Void button42_Click(System::Object^  sender, System::EventArgs^  e) {
 	show_coppeliasim();
+}
+private: System::Void button43_Click(System::Object^  sender, System::EventArgs^  e) {
+	btn_haptic_connect();
 }
 };
 }

@@ -175,6 +175,7 @@ int OpenHaptic::init()
 	// Initialize the default haptic device
 	if (HD_DEVICE_ERROR(error = hdGetError())) {
 		hduPrintError(stderr, &error, "Failed to initialize haptic device. ");
+		printf("> ___HAPTIC___ : Failed to connect to haptic device \n");
 		return -1;
 	}
 	printf("> ___HAPTIC___ :Connected to a haptic device. Device name: %s \n", hdGetString(HD_DEVICE_MODEL_TYPE));
