@@ -163,6 +163,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="ModifyPointForm.cpp" />
+    <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="OpenHaptic.cpp" />
     <ClCompile Include="RecordForm.cpp" />
     <ClCompile Include="SettingForm.cpp" />
@@ -215,6 +216,9 @@
     <ClInclude Include="ModifyPointForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="OpenHaptic.h" />
     <ClInclude Include="RecordForm.h">
       <FileType>CppForm</FileType>
@@ -265,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModifyPointForm.resx">
       <DependentUpon>ModifyPointForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyForm.resx">
+      <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecordForm.resx">
       <DependentUpon>RecordForm.h</DependentUpon>
