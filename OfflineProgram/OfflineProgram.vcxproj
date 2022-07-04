@@ -164,7 +164,9 @@
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="ModifyPointForm.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="NewChildForm.cpp" />
     <ClCompile Include="OpenHaptic.cpp" />
+    <ClCompile Include="PositionInputForm.cpp" />
     <ClCompile Include="RecordForm.cpp" />
     <ClCompile Include="SettingForm.cpp" />
     <ClCompile Include="Source.cpp" />
@@ -219,7 +221,13 @@
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="NewProgramForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="OpenHaptic.h" />
+    <ClInclude Include="PositionInputForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="RecordForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -272,6 +280,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProgramForm.resx">
+      <DependentUpon>NewProgramForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PositionInputForm.resx">
+      <DependentUpon>PositionInputForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RecordForm.resx">
       <DependentUpon>RecordForm.h</DependentUpon>

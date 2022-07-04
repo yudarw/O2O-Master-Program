@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include "NewProgramForm.h"
 
 #define CUSTOM_COLOR_PINK 245,99,100
 #define CUSTOM_COLOR_GRAY 78, 89, 111
@@ -78,6 +79,8 @@ namespace OfflineProgram {
 	private: System::Windows::Forms::Label^  label6;
 	private: System::Windows::Forms::Panel^  panel5;
 	private: System::Windows::Forms::Label^  label7;
+	private: System::Windows::Forms::Label^  label_title;
+
 
 
 
@@ -124,6 +127,7 @@ namespace OfflineProgram {
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
+			this->label_title = (gcnew System::Windows::Forms::Label());
 			this->tableLayoutPanel2 = (gcnew System::Windows::Forms::TableLayoutPanel());
 			this->panel10 = (gcnew System::Windows::Forms::Panel());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -186,6 +190,9 @@ namespace OfflineProgram {
 			this->button11->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button11->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button11->UseVisualStyleBackColor = true;
+			this->button11->Click += gcnew System::EventHandler(this, &MyForm::button11_Click);
+			this->button11->MouseEnter += gcnew System::EventHandler(this, &MyForm::button11_MouseEnter);
+			this->button11->MouseLeave += gcnew System::EventHandler(this, &MyForm::button11_MouseLeave);
 			// 
 			// button10
 			// 
@@ -204,6 +211,7 @@ namespace OfflineProgram {
 			this->button10->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button10->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button10->UseVisualStyleBackColor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
 			this->button10->MouseEnter += gcnew System::EventHandler(this, &MyForm::button10_MouseEnter);
 			this->button10->MouseLeave += gcnew System::EventHandler(this, &MyForm::button10_MouseLeave);
 			// 
@@ -224,6 +232,7 @@ namespace OfflineProgram {
 			this->button9->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button9->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button9->UseVisualStyleBackColor = true;
+			this->button9->Click += gcnew System::EventHandler(this, &MyForm::button9_Click);
 			this->button9->MouseEnter += gcnew System::EventHandler(this, &MyForm::button9_MouseEnter);
 			this->button9->MouseLeave += gcnew System::EventHandler(this, &MyForm::button9_MouseLeave);
 			// 
@@ -244,6 +253,7 @@ namespace OfflineProgram {
 			this->button8->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button8->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &MyForm::button8_Click);
 			this->button8->MouseEnter += gcnew System::EventHandler(this, &MyForm::button8_MouseEnter);
 			this->button8->MouseLeave += gcnew System::EventHandler(this, &MyForm::button8_MouseLeave);
 			// 
@@ -264,6 +274,7 @@ namespace OfflineProgram {
 			this->button7->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button7->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
 			this->button7->MouseEnter += gcnew System::EventHandler(this, &MyForm::button7_MouseEnter);
 			this->button7->MouseLeave += gcnew System::EventHandler(this, &MyForm::button7_MouseLeave);
 			// 
@@ -284,6 +295,7 @@ namespace OfflineProgram {
 			this->button2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button2->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			this->button2->MouseEnter += gcnew System::EventHandler(this, &MyForm::button2_MouseEnter);
 			this->button2->MouseLeave += gcnew System::EventHandler(this, &MyForm::button2_MouseLeave);
 			// 
@@ -304,6 +316,7 @@ namespace OfflineProgram {
 			this->button1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->button1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			this->button1->MouseEnter += gcnew System::EventHandler(this, &MyForm::button1_MouseEnter);
 			this->button1->MouseLeave += gcnew System::EventHandler(this, &MyForm::button1_MouseLeave);
 			// 
@@ -334,11 +347,11 @@ namespace OfflineProgram {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::White;
-			this->label1->Location = System::Drawing::Point(61, 22);
+			this->label1->Location = System::Drawing::Point(71, 24);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(74, 25);
+			this->label1->Size = System::Drawing::Size(56, 25);
 			this->label1->TabIndex = 0;
-			this->label1->Text = L"MENU";
+			this->label1->Text = L"O2O";
 			// 
 			// tableLayoutPanel1
 			// 
@@ -362,7 +375,7 @@ namespace OfflineProgram {
 			this->tableLayoutPanel1->Name = L"tableLayoutPanel1";
 			this->tableLayoutPanel1->RowCount = 1;
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
-			this->tableLayoutPanel1->Size = System::Drawing::Size(808, 60);
+			this->tableLayoutPanel1->Size = System::Drawing::Size(824, 60);
 			this->tableLayoutPanel1->TabIndex = 2;
 			// 
 			// button6
@@ -374,11 +387,11 @@ namespace OfflineProgram {
 			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button6->ForeColor = System::Drawing::Color::White;
 			this->button6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.Image")));
-			this->button6->Location = System::Drawing::Point(606, 0);
+			this->button6->Location = System::Drawing::Point(618, 0);
 			this->button6->Margin = System::Windows::Forms::Padding(0);
 			this->button6->Name = L"button6";
 			this->button6->Padding = System::Windows::Forms::Padding(15, 0, 0, 0);
-			this->button6->Size = System::Drawing::Size(202, 60);
+			this->button6->Size = System::Drawing::Size(206, 60);
 			this->button6->TabIndex = 3;
 			this->button6->Text = L"     Run Program";
 			this->button6->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -397,11 +410,11 @@ namespace OfflineProgram {
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button5->ForeColor = System::Drawing::Color::White;
 			this->button5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button5.Image")));
-			this->button5->Location = System::Drawing::Point(404, 0);
+			this->button5->Location = System::Drawing::Point(412, 0);
 			this->button5->Margin = System::Windows::Forms::Padding(0);
 			this->button5->Name = L"button5";
 			this->button5->Padding = System::Windows::Forms::Padding(15, 0, 0, 0);
-			this->button5->Size = System::Drawing::Size(202, 60);
+			this->button5->Size = System::Drawing::Size(206, 60);
 			this->button5->TabIndex = 2;
 			this->button5->Text = L"     Run Trajectory";
 			this->button5->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -418,11 +431,11 @@ namespace OfflineProgram {
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button4->ForeColor = System::Drawing::Color::White;
 			this->button4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.Image")));
-			this->button4->Location = System::Drawing::Point(202, 0);
+			this->button4->Location = System::Drawing::Point(206, 0);
 			this->button4->Margin = System::Windows::Forms::Padding(0);
 			this->button4->Name = L"button4";
 			this->button4->Padding = System::Windows::Forms::Padding(15, 0, 0, 0);
-			this->button4->Size = System::Drawing::Size(202, 60);
+			this->button4->Size = System::Drawing::Size(206, 60);
 			this->button4->TabIndex = 1;
 			this->button4->Text = L"     Haptic Control";
 			this->button4->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -443,7 +456,7 @@ namespace OfflineProgram {
 			this->button3->Margin = System::Windows::Forms::Padding(0);
 			this->button3->Name = L"button3";
 			this->button3->Padding = System::Windows::Forms::Padding(15, 0, 0, 0);
-			this->button3->Size = System::Drawing::Size(202, 60);
+			this->button3->Size = System::Drawing::Size(206, 60);
 			this->button3->TabIndex = 0;
 			this->button3->Text = L"     Initialization";
 			this->button3->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -457,7 +470,7 @@ namespace OfflineProgram {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::White;
-			this->label2->Location = System::Drawing::Point(705, 0);
+			this->label2->Location = System::Drawing::Point(721, 0);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(103, 70);
 			this->label2->TabIndex = 0;
@@ -468,13 +481,27 @@ namespace OfflineProgram {
 			// 
 			this->panel3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(36)), static_cast<System::Int32>(static_cast<System::Byte>(42)),
 				static_cast<System::Int32>(static_cast<System::Byte>(56)));
+			this->panel3->Controls->Add(this->label_title);
 			this->panel3->Controls->Add(this->tableLayoutPanel2);
 			this->panel3->Controls->Add(this->label2);
 			this->panel3->Dock = System::Windows::Forms::DockStyle::Top;
 			this->panel3->Location = System::Drawing::Point(200, 0);
 			this->panel3->Name = L"panel3";
-			this->panel3->Size = System::Drawing::Size(808, 70);
+			this->panel3->Size = System::Drawing::Size(824, 70);
 			this->panel3->TabIndex = 3;
+			// 
+			// label_title
+			// 
+			this->label_title->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->label_title->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label_title->ForeColor = System::Drawing::Color::White;
+			this->label_title->Location = System::Drawing::Point(0, 0);
+			this->label_title->Name = L"label_title";
+			this->label_title->Size = System::Drawing::Size(476, 70);
+			this->label_title->TabIndex = 1;
+			this->label_title->Text = L"Program ";
+			this->label_title->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// tableLayoutPanel2
 			// 
@@ -492,7 +519,7 @@ namespace OfflineProgram {
 			this->tableLayoutPanel2->Controls->Add(this->panel6, 1, 0);
 			this->tableLayoutPanel2->Controls->Add(this->panel5, 0, 0);
 			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Right;
-			this->tableLayoutPanel2->Location = System::Drawing::Point(460, 0);
+			this->tableLayoutPanel2->Location = System::Drawing::Point(476, 0);
 			this->tableLayoutPanel2->Name = L"tableLayoutPanel2";
 			this->tableLayoutPanel2->RowCount = 2;
 			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 50)));
@@ -635,7 +662,7 @@ namespace OfflineProgram {
 			// MyForm
 			// 
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
-			this->ClientSize = System::Drawing::Size(1008, 612);
+			this->ClientSize = System::Drawing::Size(1024, 612);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->tableLayoutPanel1);
 			this->Controls->Add(this->panel1);
@@ -660,6 +687,11 @@ namespace OfflineProgram {
 
 		}
 #pragma endregion
+	public:
+			void btn_show_position_input();
+
+
+
 	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
 	}
 	private: System::Void button6_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e) {
@@ -727,5 +759,42 @@ namespace OfflineProgram {
 	private: System::Void button10_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
 		button10->BackColor = Color::FromArgb(CUSTOM_COLOR_DEFAULT);
 	}
+	private: System::Void button11_MouseEnter(System::Object^  sender, System::EventArgs^  e) {
+		button11->BackColor = Color::FromArgb(CUSTOM_COLOR_PINK);
+	}
+	private: System::Void button11_MouseLeave(System::Object^  sender, System::EventArgs^  e) {
+		button11->BackColor = Color::FromArgb(CUSTOM_COLOR_DEFAULT);
+	}
+	private: System::Void button11_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->Close();
+	}
+	private: System::Void button9_Click(System::Object^  sender, System::EventArgs^  e) {
+		btn_show_position_input();
+	}
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		label_title->Text = "Program";
+		NewChildForm ^ form = gcnew NewChildForm;
+		form->MdiParent = this;
+		form->Show();
+		form->Dock = DockStyle::Fill;  
+	}
+
+	private: System::Void OpenChildForm(Form ^ childForm, System::Object btnSender) {
+		if (ActiveForm != nullptr) {
+			ActiveForm->Close();
+		}
+	}
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		label_title->Text = "Trajectory Editor";
+	}
+	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
+		label_title->Text = "Calibration";
+	}
+	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
+		label_title->Text = "Robot Status";
+	}
+private: System::Void button10_Click(System::Object^  sender, System::EventArgs^  e) {
+	label_title->Text = "Settings";
+}
 };
 }
