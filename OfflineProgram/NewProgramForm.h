@@ -47,6 +47,7 @@ namespace OfflineProgram {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  col_w;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  col_p;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  col_r;
+	private: System::Windows::Forms::Panel^  panel2;
 
 
 
@@ -79,6 +80,7 @@ namespace OfflineProgram {
 			this->col_w = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->col_p = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->col_r = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->SuspendLayout();
@@ -134,9 +136,10 @@ namespace OfflineProgram {
 			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle2;
-			this->dataGridView1->Location = System::Drawing::Point(265, 33);
+			this->dataGridView1->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->dataGridView1->Location = System::Drawing::Point(200, 27);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(627, 499);
+			this->dataGridView1->Size = System::Drawing::Size(704, 517);
 			this->dataGridView1->TabIndex = 1;
 			// 
 			// column_step
@@ -181,6 +184,14 @@ namespace OfflineProgram {
 			this->col_r->HeaderText = L"R";
 			this->col_r->Name = L"col_r";
 			// 
+			// panel2
+			// 
+			this->panel2->Dock = System::Windows::Forms::DockStyle::Left;
+			this->panel2->Location = System::Drawing::Point(0, 27);
+			this->panel2->Name = L"panel2";
+			this->panel2->Size = System::Drawing::Size(200, 517);
+			this->panel2->TabIndex = 2;
+			// 
 			// NewChildForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -189,6 +200,7 @@ namespace OfflineProgram {
 				static_cast<System::Int32>(static_cast<System::Byte>(224)));
 			this->ClientSize = System::Drawing::Size(904, 544);
 			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->panel1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 			this->Name = L"NewChildForm";
