@@ -831,7 +831,7 @@ void MainForm::btn_initDevice() {
 		}
 		yrc.send_command("CONNECT Robot_access Keep-Alive:50000\r", yrc.pRecv);
 	}
-	
+
 	// Connect the haptic device
 	if (!haptic.connected) {
 		if (haptic.init() == -1) {
@@ -844,7 +844,6 @@ void MainForm::btn_initDevice() {
 			return;
 		}
 	}
-
 	 
 	// Connect the force sensor
 	if (!wacoh_isConnected) {
@@ -860,14 +859,12 @@ void MainForm::btn_initDevice() {
 
 	// Activate the thread update data:
 	//_beginthread(thread_update_robot_data, 0, NULL);
-
 	System::Windows::Forms::MessageBox::Show(
 		"Device connection success!",
 		"Initialization",
 		MessageBoxButtons::OK,
 		MessageBoxIcon::Information
 	);
-	
 }
 
 void MainForm::btn_roboguide_connect() {
@@ -884,9 +881,10 @@ void MainForm::btn_roboguide_connect() {
 
 
 void thread_tool_calibration(void *) {
-	
+		
 
 }
+
 void MainForm::btn_tool_calibration() {
 	
 
@@ -1021,5 +1019,7 @@ void MainForm::btn_haptic_connect() {
 			);
 			return;
 		}
+
+		System::Windows::Forms::MessageBox::Show("Haptic connection success");
 	}
 }

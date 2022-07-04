@@ -406,11 +406,11 @@ protected:
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox15 = (gcnew System::Windows::Forms::GroupBox());
@@ -557,7 +557,7 @@ protected:
 			this->tabControl1->Location = System::Drawing::Point(3, 56);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(938, 649);
+			this->tabControl1->Size = System::Drawing::Size(945, 649);
 			this->tabControl1->SizeMode = System::Windows::Forms::TabSizeMode::Fixed;
 			this->tabControl1->TabIndex = 4;
 			// 
@@ -1469,7 +1469,7 @@ protected:
 			this->tabPage3->Controls->Add(this->groupBox9);
 			this->tabPage3->Location = System::Drawing::Point(4, 39);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Size = System::Drawing::Size(930, 606);
+			this->tabPage3->Size = System::Drawing::Size(937, 606);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Settings";
 			this->tabPage3->UseVisualStyleBackColor = true;
@@ -1723,7 +1723,7 @@ protected:
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 655)));
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 82)));
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 19)));
-			this->tableLayoutPanel1->Size = System::Drawing::Size(944, 790);
+			this->tableLayoutPanel1->Size = System::Drawing::Size(951, 790);
 			this->tableLayoutPanel1->TabIndex = 5;
 			// 
 			// tableLayoutPanel2
@@ -1749,7 +1749,7 @@ protected:
 			this->tableLayoutPanel2->Name = L"tableLayoutPanel2";
 			this->tableLayoutPanel2->RowCount = 1;
 			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
-			this->tableLayoutPanel2->Size = System::Drawing::Size(938, 76);
+			this->tableLayoutPanel2->Size = System::Drawing::Size(945, 76);
 			this->tableLayoutPanel2->TabIndex = 5;
 			// 
 			// btnRunTrajectory
@@ -1760,9 +1760,9 @@ protected:
 			this->btnRunTrajectory->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnRunTrajectory->ForeColor = System::Drawing::Color::Black;
 			this->btnRunTrajectory->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnRunTrajectory.Image")));
-			this->btnRunTrajectory->Location = System::Drawing::Point(564, 3);
+			this->btnRunTrajectory->Location = System::Drawing::Point(570, 3);
 			this->btnRunTrajectory->Name = L"btnRunTrajectory";
-			this->btnRunTrajectory->Size = System::Drawing::Size(181, 70);
+			this->btnRunTrajectory->Size = System::Drawing::Size(183, 70);
 			this->btnRunTrajectory->TabIndex = 10;
 			this->btnRunTrajectory->Text = L"  RUN TRAJECTORY";
 			this->btnRunTrajectory->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -1777,9 +1777,9 @@ protected:
 			this->btnRunProgram->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnRunProgram->ForeColor = System::Drawing::Color::Black;
 			this->btnRunProgram->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnRunProgram.Image")));
-			this->btnRunProgram->Location = System::Drawing::Point(751, 3);
+			this->btnRunProgram->Location = System::Drawing::Point(759, 3);
 			this->btnRunProgram->Name = L"btnRunProgram";
-			this->btnRunProgram->Size = System::Drawing::Size(184, 70);
+			this->btnRunProgram->Size = System::Drawing::Size(183, 70);
 			this->btnRunProgram->TabIndex = 9;
 			this->btnRunProgram->Text = L"  RUN PROGRAM";
 			this->btnRunProgram->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -1794,9 +1794,9 @@ protected:
 			this->btn_hapticTeleoperation->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btn_hapticTeleoperation->ForeColor = System::Drawing::Color::Black;
 			this->btn_hapticTeleoperation->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btn_hapticTeleoperation.Image")));
-			this->btn_hapticTeleoperation->Location = System::Drawing::Point(377, 3);
+			this->btn_hapticTeleoperation->Location = System::Drawing::Point(381, 3);
 			this->btn_hapticTeleoperation->Name = L"btn_hapticTeleoperation";
-			this->btn_hapticTeleoperation->Size = System::Drawing::Size(181, 70);
+			this->btn_hapticTeleoperation->Size = System::Drawing::Size(183, 70);
 			this->btn_hapticTeleoperation->TabIndex = 8;
 			this->btn_hapticTeleoperation->Text = L"HAPTIC TELEOPERATION";
 			this->btn_hapticTeleoperation->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -1813,7 +1813,7 @@ protected:
 			this->button8->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button8.Image")));
 			this->button8->Location = System::Drawing::Point(3, 3);
 			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(181, 70);
+			this->button8->Size = System::Drawing::Size(183, 70);
 			this->button8->TabIndex = 7;
 			this->button8->Text = L"   INITIALIZATION";
 			this->button8->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -1828,9 +1828,9 @@ protected:
 			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button7->ForeColor = System::Drawing::Color::Black;
 			this->button7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button7.Image")));
-			this->button7->Location = System::Drawing::Point(190, 3);
+			this->button7->Location = System::Drawing::Point(192, 3);
 			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(181, 70);
+			this->button7->Size = System::Drawing::Size(183, 70);
 			this->button7->TabIndex = 6;
 			this->button7->Text = L"   ROBOT STATUS";
 			this->button7->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
@@ -1850,7 +1850,7 @@ protected:
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel1->Location = System::Drawing::Point(3, 3);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(938, 47);
+			this->panel1->Size = System::Drawing::Size(945, 47);
 			this->panel1->TabIndex = 6;
 			// 
 			// indicator_alarm
@@ -1858,7 +1858,7 @@ protected:
 			this->indicator_alarm->BackColor = System::Drawing::Color::Red;
 			this->indicator_alarm->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->indicator_alarm->Controls->Add(this->label_alarm);
-			this->indicator_alarm->Location = System::Drawing::Point(603, 3);
+			this->indicator_alarm->Location = System::Drawing::Point(603, 8);
 			this->indicator_alarm->Name = L"indicator_alarm";
 			this->indicator_alarm->Size = System::Drawing::Size(71, 31);
 			this->indicator_alarm->TabIndex = 3;
@@ -1893,7 +1893,7 @@ protected:
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::White;
-			this->label2->Location = System::Drawing::Point(466, 10);
+			this->label2->Location = System::Drawing::Point(466, 15);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(57, 15);
 			this->label2->TabIndex = 4;
@@ -1905,7 +1905,7 @@ protected:
 			this->label_speed_ratio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label_speed_ratio->ForeColor = System::Drawing::Color::Lime;
-			this->label_speed_ratio->Location = System::Drawing::Point(531, 5);
+			this->label_speed_ratio->Location = System::Drawing::Point(531, 10);
 			this->label_speed_ratio->Name = L"label_speed_ratio";
 			this->label_speed_ratio->Size = System::Drawing::Size(59, 24);
 			this->label_speed_ratio->TabIndex = 1;
@@ -1916,7 +1916,7 @@ protected:
 			this->indicator_robot->BackColor = System::Drawing::Color::Maroon;
 			this->indicator_robot->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->indicator_robot->Controls->Add(this->label13);
-			this->indicator_robot->Location = System::Drawing::Point(680, 3);
+			this->indicator_robot->Location = System::Drawing::Point(680, 8);
 			this->indicator_robot->Name = L"indicator_robot";
 			this->indicator_robot->Size = System::Drawing::Size(71, 31);
 			this->indicator_robot->TabIndex = 2;
@@ -1940,7 +1940,7 @@ protected:
 				static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->indicator_haptic->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->indicator_haptic->Controls->Add(this->label12);
-			this->indicator_haptic->Location = System::Drawing::Point(756, 3);
+			this->indicator_haptic->Location = System::Drawing::Point(756, 8);
 			this->indicator_haptic->Name = L"indicator_haptic";
 			this->indicator_haptic->Size = System::Drawing::Size(71, 31);
 			this->indicator_haptic->TabIndex = 1;
@@ -1962,7 +1962,7 @@ protected:
 			this->indicator_ftsensor->BackColor = System::Drawing::Color::Maroon;
 			this->indicator_ftsensor->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->indicator_ftsensor->Controls->Add(this->label11);
-			this->indicator_ftsensor->Location = System::Drawing::Point(832, 3);
+			this->indicator_ftsensor->Location = System::Drawing::Point(832, 8);
 			this->indicator_ftsensor->Name = L"indicator_ftsensor";
 			this->indicator_ftsensor->Size = System::Drawing::Size(107, 31);
 			this->indicator_ftsensor->TabIndex = 0;
@@ -1995,7 +1995,7 @@ protected:
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->ClientSize = System::Drawing::Size(944, 790);
+			this->ClientSize = System::Drawing::Size(951, 790);
 			this->Controls->Add(this->tableLayoutPanel1);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
