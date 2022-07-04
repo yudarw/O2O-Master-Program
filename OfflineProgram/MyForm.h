@@ -71,15 +71,17 @@ namespace OfflineProgram {
 	private: System::Windows::Forms::Label^  label4;
 	private: System::Windows::Forms::Panel^  panel9;
 	private: System::Windows::Forms::Label^  label5;
-	private: System::Windows::Forms::Panel^  panel8;
-	private: System::Windows::Forms::Label^  label8;
+
+
 	private: System::Windows::Forms::Panel^  panel7;
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Panel^  panel6;
 	private: System::Windows::Forms::Label^  label6;
-	private: System::Windows::Forms::Panel^  panel5;
-	private: System::Windows::Forms::Label^  label7;
+
+
 	private: System::Windows::Forms::Label^  label_title;
+	private: System::Windows::Forms::Timer^  timer1;
+	private: System::ComponentModel::IContainer^  components;
 
 
 
@@ -99,7 +101,7 @@ namespace OfflineProgram {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -108,6 +110,7 @@ namespace OfflineProgram {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->button11 = (gcnew System::Windows::Forms::Button());
@@ -133,14 +136,11 @@ namespace OfflineProgram {
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->panel9 = (gcnew System::Windows::Forms::Panel());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->panel8 = (gcnew System::Windows::Forms::Panel());
-			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->panel7 = (gcnew System::Windows::Forms::Panel());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->panel6 = (gcnew System::Windows::Forms::Panel());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->panel5 = (gcnew System::Windows::Forms::Panel());
-			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->panel1->SuspendLayout();
 			this->panel2->SuspendLayout();
 			this->tableLayoutPanel1->SuspendLayout();
@@ -148,10 +148,8 @@ namespace OfflineProgram {
 			this->tableLayoutPanel2->SuspendLayout();
 			this->panel10->SuspendLayout();
 			this->panel9->SuspendLayout();
-			this->panel8->SuspendLayout();
 			this->panel7->SuspendLayout();
 			this->panel6->SuspendLayout();
-			this->panel5->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// panel1
@@ -514,10 +512,8 @@ namespace OfflineProgram {
 				33.33333F)));
 			this->tableLayoutPanel2->Controls->Add(this->panel10, 2, 1);
 			this->tableLayoutPanel2->Controls->Add(this->panel9, 1, 1);
-			this->tableLayoutPanel2->Controls->Add(this->panel8, 0, 1);
 			this->tableLayoutPanel2->Controls->Add(this->panel7, 2, 0);
 			this->tableLayoutPanel2->Controls->Add(this->panel6, 1, 0);
-			this->tableLayoutPanel2->Controls->Add(this->panel5, 0, 0);
 			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Right;
 			this->tableLayoutPanel2->Location = System::Drawing::Point(476, 0);
 			this->tableLayoutPanel2->Name = L"tableLayoutPanel2";
@@ -571,27 +567,6 @@ namespace OfflineProgram {
 			this->label5->Text = L"SENSOR";
 			this->label5->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// panel8
-			// 
-			this->panel8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->panel8->Controls->Add(this->label8);
-			this->panel8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel8->Location = System::Drawing::Point(3, 38);
-			this->panel8->Name = L"panel8";
-			this->panel8->Size = System::Drawing::Size(75, 29);
-			this->panel8->TabIndex = 3;
-			// 
-			// label8
-			// 
-			this->label8->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label8->ForeColor = System::Drawing::Color::White;
-			this->label8->Location = System::Drawing::Point(0, 0);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(75, 29);
-			this->label8->TabIndex = 1;
-			this->label8->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			// 
 			// panel7
 			// 
 			this->panel7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
@@ -605,7 +580,8 @@ namespace OfflineProgram {
 			// 
 			// label3
 			// 
-			this->label3->BackColor = System::Drawing::Color::LimeGreen;
+			this->label3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->label3->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label3->ForeColor = System::Drawing::Color::White;
 			this->label3->Location = System::Drawing::Point(0, 0);
@@ -628,7 +604,8 @@ namespace OfflineProgram {
 			// 
 			// label6
 			// 
-			this->label6->BackColor = System::Drawing::Color::Red;
+			this->label6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
 			this->label6->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->label6->ForeColor = System::Drawing::Color::White;
 			this->label6->Location = System::Drawing::Point(0, 0);
@@ -638,26 +615,10 @@ namespace OfflineProgram {
 			this->label6->Text = L"ALARM";
 			this->label6->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
-			// panel5
+			// timer1
 			// 
-			this->panel5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->panel5->Controls->Add(this->label7);
-			this->panel5->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panel5->Location = System::Drawing::Point(3, 3);
-			this->panel5->Name = L"panel5";
-			this->panel5->Size = System::Drawing::Size(75, 29);
-			this->panel5->TabIndex = 0;
-			// 
-			// label7
-			// 
-			this->label7->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->label7->ForeColor = System::Drawing::Color::White;
-			this->label7->Location = System::Drawing::Point(0, 0);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(75, 29);
-			this->label7->TabIndex = 1;
-			this->label7->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
+			this->timer1->Enabled = true;
+			this->timer1->Tick += gcnew System::EventHandler(this, &MyForm::timer1_Tick);
 			// 
 			// MyForm
 			// 
@@ -679,16 +640,15 @@ namespace OfflineProgram {
 			this->tableLayoutPanel2->ResumeLayout(false);
 			this->panel10->ResumeLayout(false);
 			this->panel9->ResumeLayout(false);
-			this->panel8->ResumeLayout(false);
 			this->panel7->ResumeLayout(false);
 			this->panel6->ResumeLayout(false);
-			this->panel5->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
 	public:
 			void btn_show_position_input();
+			void on_timer();
 
 
 
@@ -793,8 +753,11 @@ namespace OfflineProgram {
 	private: System::Void button8_Click(System::Object^  sender, System::EventArgs^  e) {
 		label_title->Text = "Robot Status";
 	}
-private: System::Void button10_Click(System::Object^  sender, System::EventArgs^  e) {
-	label_title->Text = "Settings";
-}
+	private: System::Void button10_Click(System::Object^  sender, System::EventArgs^  e) {
+		label_title->Text = "Settings";
+	}
+	private: System::Void timer1_Tick(System::Object^  sender, System::EventArgs^  e) {
+		on_timer();
+	}
 };
 }
