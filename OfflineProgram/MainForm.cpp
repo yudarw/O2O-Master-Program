@@ -180,12 +180,14 @@ void MainForm::btn_haptic_teleoperation() {
 
 		printf(">>> Start Teleoperation. Teleoperation Mode=%d \n", teleoperation_method);
 
+		// Default Mode
 		if (teleoperation_method == 0)
 			_beginthread(thread_simTeleoperation, 0, NULL);
 
 		else if (teleoperation_method == 1)
 			_beginthread(thread_simTeleoperation_2, 0, NULL);
 
+		// Impedance Mode
 		else if (teleoperation_method == 2)
 			_beginthread(thread_simTeleoperation_3, 0, NULL);
 
