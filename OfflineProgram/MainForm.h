@@ -407,6 +407,10 @@ protected:
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->groupBox15 = (gcnew System::Windows::Forms::GroupBox());
@@ -550,7 +554,7 @@ protected:
 			this->tabControl1->Controls->Add(this->tabPage3);
 			this->tabControl1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->tabControl1->ItemSize = System::Drawing::Size(100, 35);
-			this->tabControl1->Location = System::Drawing::Point(3, 11);
+			this->tabControl1->Location = System::Drawing::Point(3, 56);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
 			this->tabControl1->Size = System::Drawing::Size(938, 649);
@@ -971,11 +975,29 @@ protected:
 			this->dataGridView1->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView1->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->dataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->Column1,
 					this->INSTRUCTION, this->Column2
 			});
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle2;
 			this->dataGridView1->Location = System::Drawing::Point(3, 17);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
@@ -1021,7 +1043,7 @@ protected:
 			this->tabPage2->Location = System::Drawing::Point(4, 39);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(934, 607);
+			this->tabPage2->Size = System::Drawing::Size(930, 606);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Trajectory";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -1361,11 +1383,29 @@ protected:
 			this->dataGridView2->BackgroundColor = System::Drawing::Color::White;
 			this->dataGridView2->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
 			this->dataGridView2->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
 				this->dataGridViewTextBoxColumn1,
 					this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8
 			});
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle4->ForeColor = System::Drawing::Color::Black;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView2->DefaultCellStyle = dataGridViewCellStyle4;
 			this->dataGridView2->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->dataGridView2->Location = System::Drawing::Point(3, 16);
 			this->dataGridView2->Name = L"dataGridView2";
@@ -1429,7 +1469,7 @@ protected:
 			this->tabPage3->Controls->Add(this->groupBox9);
 			this->tabPage3->Location = System::Drawing::Point(4, 39);
 			this->tabPage3->Name = L"tabPage3";
-			this->tabPage3->Size = System::Drawing::Size(934, 607);
+			this->tabPage3->Size = System::Drawing::Size(930, 606);
 			this->tabPage3->TabIndex = 2;
 			this->tabPage3->Text = L"Settings";
 			this->tabPage3->UseVisualStyleBackColor = true;
@@ -1683,7 +1723,7 @@ protected:
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 655)));
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 82)));
 			this->tableLayoutPanel1->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 19)));
-			this->tableLayoutPanel1->Size = System::Drawing::Size(944, 745);
+			this->tableLayoutPanel1->Size = System::Drawing::Size(944, 790);
 			this->tableLayoutPanel1->TabIndex = 5;
 			// 
 			// tableLayoutPanel2
@@ -1705,7 +1745,7 @@ protected:
 			this->tableLayoutPanel2->Controls->Add(this->button8, 0, 0);
 			this->tableLayoutPanel2->Controls->Add(this->button7, 0, 0);
 			this->tableLayoutPanel2->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->tableLayoutPanel2->Location = System::Drawing::Point(3, 666);
+			this->tableLayoutPanel2->Location = System::Drawing::Point(3, 711);
 			this->tableLayoutPanel2->Name = L"tableLayoutPanel2";
 			this->tableLayoutPanel2->RowCount = 1;
 			this->tableLayoutPanel2->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Percent, 100)));
@@ -1810,7 +1850,7 @@ protected:
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panel1->Location = System::Drawing::Point(3, 3);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(938, 2);
+			this->panel1->Size = System::Drawing::Size(938, 47);
 			this->panel1->TabIndex = 6;
 			// 
 			// indicator_alarm
@@ -1955,7 +1995,7 @@ protected:
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->ClientSize = System::Drawing::Size(944, 745);
+			this->ClientSize = System::Drawing::Size(944, 790);
 			this->Controls->Add(this->tableLayoutPanel1);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));

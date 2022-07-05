@@ -849,7 +849,6 @@ void MainForm::btn_initDevice() {
 
 	 
 	// Connect the force sensor
-	
 	if (!wacoh_isConnected) {
 		if (serial_connect(serialComPort) == -1) {
 			System::Windows::Forms::MessageBox::Show(
