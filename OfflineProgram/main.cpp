@@ -220,8 +220,6 @@ vector<pos_t> trajectory_setToZero(vector<pos_t> pos) {
 }
 
 
-
-
 // -- Calibrate Trajectory -- //
 vector<pos_t> calibrate_trajectory(vector<pos_t> pos) {
 	int pSize = pos.size();
