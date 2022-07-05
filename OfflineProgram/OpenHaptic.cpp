@@ -197,9 +197,10 @@ int OpenHaptic::init()
 // Disconnect haptic connection
 void OpenHaptic::close()
 {
-	hlDeleteEffects(gEffect, 1);
-	hlMakeCurrent(NULL);
-	hlDeleteContext(hHLRC);
+	//hlDeleteEffects(gEffect, 1);
+	//hlMakeCurrent(NULL);
+	//hlDeleteContext(hHLRC);
+	hdStopScheduler();
 	hdDisableDevice(hHD);
 	this->connected = false;
 }

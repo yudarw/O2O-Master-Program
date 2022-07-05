@@ -1155,6 +1155,10 @@ void run_trajectory_non_threated() {
 	
 	i = 0;
 	while (trajectoryIsRunning && (i < max)) {
+		// Refresh roboguide data:
+		roboguide.refresh();
+		roboguide.read_currentPos();
+		
 		pos = tab2.data[i];
 
 		rgPos = roboguide.current_pos;
@@ -1174,6 +1178,7 @@ void run_trajectory_non_threated() {
 		tab2.selected_index = i;
 
 		i++;
+		Sleep(50);
 	}
 
 	trajectoryIsRunning = false;

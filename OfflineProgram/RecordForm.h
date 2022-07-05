@@ -40,10 +40,11 @@ namespace OfflineProgram {
 		}
 	private: System::Windows::Forms::GroupBox^  groupBox8;
 	private: System::Windows::Forms::Button^  btnRg;
+	private: System::Windows::Forms::TextBox^ tbSamplingTime;
 	protected:
 
 
-	private: System::Windows::Forms::TextBox^  textBox1;
+
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Button^  btnYw;
 	private: System::Windows::Forms::Timer^  timer1;
@@ -66,15 +67,15 @@ namespace OfflineProgram {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(RecordForm::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(RecordForm::typeid));
 			this->groupBox8 = (gcnew System::Windows::Forms::GroupBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->btnYw = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->tbSamplingTime = (gcnew System::Windows::Forms::TextBox());
 			this->btnRg = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->groupBox8->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -83,7 +84,7 @@ namespace OfflineProgram {
 			this->groupBox8->Controls->Add(this->label2);
 			this->groupBox8->Controls->Add(this->textBox2);
 			this->groupBox8->Controls->Add(this->btnYw);
-			this->groupBox8->Controls->Add(this->textBox1);
+			this->groupBox8->Controls->Add(this->tbSamplingTime);
 			this->groupBox8->Controls->Add(this->btnRg);
 			this->groupBox8->Controls->Add(this->label1);
 			this->groupBox8->Location = System::Drawing::Point(12, 12);
@@ -92,6 +93,23 @@ namespace OfflineProgram {
 			this->groupBox8->TabIndex = 7;
 			this->groupBox8->TabStop = false;
 			this->groupBox8->Text = L"TRAJECTORY RECORD";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(49, 172);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(71, 15);
+			this->label2->TabIndex = 8;
+			this->label2->Text = L"JOB NAME:";
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(52, 190);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(178, 21);
+			this->textBox2->TabIndex = 8;
+			this->textBox2->Text = L"TES-PROGRAM";
 			// 
 			// btnYw
 			// 
@@ -110,17 +128,17 @@ namespace OfflineProgram {
 			this->btnYw->UseVisualStyleBackColor = false;
 			this->btnYw->Click += gcnew System::EventHandler(this, &RecordForm::btnYw_Click);
 			// 
-			// textBox1
+			// tbSamplingTime
 			// 
-			this->textBox1->BackColor = System::Drawing::Color::White;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->tbSamplingTime->BackColor = System::Drawing::Color::White;
+			this->tbSamplingTime->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->Location = System::Drawing::Point(151, 32);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(79, 21);
-			this->textBox1->TabIndex = 1;
-			this->textBox1->Text = L"50";
-			this->textBox1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			this->tbSamplingTime->Location = System::Drawing::Point(151, 32);
+			this->tbSamplingTime->Name = L"tbSamplingTime";
+			this->tbSamplingTime->Size = System::Drawing::Size(79, 21);
+			this->tbSamplingTime->TabIndex = 1;
+			this->tbSamplingTime->Text = L"50";
+			this->tbSamplingTime->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// btnRg
 			// 
@@ -152,23 +170,6 @@ namespace OfflineProgram {
 			// 
 			this->timer1->Interval = 50;
 			this->timer1->Tick += gcnew System::EventHandler(this, &RecordForm::timer1_Tick);
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(52, 190);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(178, 21);
-			this->textBox2->TabIndex = 8;
-			this->textBox2->Text = L"TES-PROGRAM";
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(49, 172);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(71, 15);
-			this->label2->TabIndex = 8;
-			this->label2->Text = L"JOB NAME:";
 			// 
 			// RecordForm
 			// 

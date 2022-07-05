@@ -49,8 +49,8 @@ void MainForm::on_init() {
 	yrc.global_pos.P = 000.040;
 	yrc.global_pos.R = -60.321;
 	// Initialize the selected device
-	selected_robot = YASKAWA;
-	//selected_robot = ROBOGUIDE;
+	//selected_robot = YASKAWA;
+	selected_robot = ROBOGUIDE;
 	load_origin_data();
 
 	// -- Update Haptic Mode Selection --
@@ -148,6 +148,15 @@ bool MainForm::isFormOpened(String ^ form_name) {
 	return false;
 }
 
+bool formOpened(String^ form_name) {
+	FormCollection^ fc = System::Windows::Forms::Application::OpenForms;
+	for each (Form ^ form in fc) {
+		if (form->Name == form_name)
+			return true;
+	}
+	return false;
+}
+
 
 // ////////////////////////////////////////////////////////////////////
 //							MAIN CONTROL BUTTON						 //
@@ -200,9 +209,13 @@ void MainForm::btn_haptic_teleoperation() {
 
 void MainForm::btn_run_trajectory() {
 
-	run_trajectory_non_threated();
-	return;
+	// If the selected robot is Roboguide:
+	if (selected_robot == ROBOGUIDE) {
+		run_trajectory_non_threated();
+		return;
+	}
 
+	// Else: run in Yaskawa program
 	if (!trajectoryIsRunning) {
 		if (!yrc.isConnected) {
 			System::Windows::Forms::MessageBox::Show("Robot is not connected", "Run trajectory error", MessageBoxButtons::OK, MessageBoxIcon::Error);
@@ -1005,10 +1018,19 @@ void MainForm::btn_test() {
 }
 
 void MainForm::show_coppeliasim() {
-	if (isFormOpened("CoppeliaForm1") == false) {
+	/*
+	if (formOpened("CoppeliaForm1") == false) {
+		CoppeliaForm^ form = gcnew CoppeliaForm;
+		form->Show(this);
+	}
+	*/
+
+	/**/
+	if (isFormOpened("CoppeliaForm") == false) {
 		CoppeliaForm ^ form = gcnew CoppeliaForm;
 		form->Show(this);
 	}
+	
 }
 
 void MainForm::btn_haptic_connect() {
