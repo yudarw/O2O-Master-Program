@@ -32,9 +32,12 @@ void RecordForm::btn_record_roboguide(){
 		tab2.data.clear();
 
 		btnRg->Text = "Stop Recording";
+		
+		int samplingTime = Convert::ToInt16(tbSamplingTime->Text);
+		
 		// triger the IO pin:
 		roboguide.set_sdo(2, ON);
-		timer1->Interval = 100;
+		timer1->Interval = samplingTime;
 		timer1->Enabled = true;
 		timer1->Start();
 	}

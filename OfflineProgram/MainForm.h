@@ -1866,12 +1866,12 @@ protected:
 			// label_alarm
 			// 
 			this->label_alarm->AutoSize = true;
-			this->label_alarm->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label_alarm->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label_alarm->ForeColor = System::Drawing::Color::White;
 			this->label_alarm->Location = System::Drawing::Point(12, 7);
 			this->label_alarm->Name = L"label_alarm";
-			this->label_alarm->Size = System::Drawing::Size(53, 15);
+			this->label_alarm->Size = System::Drawing::Size(48, 15);
 			this->label_alarm->TabIndex = 0;
 			this->label_alarm->Text = L"ALARM";
 			// 
@@ -1925,12 +1925,12 @@ protected:
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label13->ForeColor = System::Drawing::Color::White;
 			this->label13->Location = System::Drawing::Point(8, 7);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(54, 15);
+			this->label13->Size = System::Drawing::Size(49, 15);
 			this->label13->TabIndex = 0;
 			this->label13->Text = L"ROBOT";
 			// 
@@ -1948,12 +1948,12 @@ protected:
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label12->ForeColor = System::Drawing::Color::White;
 			this->label12->Location = System::Drawing::Point(8, 7);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(55, 15);
+			this->label12->Size = System::Drawing::Size(49, 15);
 			this->label12->TabIndex = 0;
 			this->label12->Text = L"HAPTIC";
 			// 
@@ -1970,12 +1970,12 @@ protected:
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label11->ForeColor = System::Drawing::Color::White;
 			this->label11->Location = System::Drawing::Point(8, 7);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(88, 15);
+			this->label11->Size = System::Drawing::Size(78, 15);
 			this->label11->TabIndex = 0;
 			this->label11->Text = L"F/T SENSOR";
 			// 
