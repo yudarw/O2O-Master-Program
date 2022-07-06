@@ -621,13 +621,15 @@ void setRobotPosition(Vector3d pos, Vector3d rot) {
 
 // -- Bilateral Teleoperation Method --
 // ======================================================
+// Mode 0 : Default Teleoperation Mode
+
 void thread_simTeleoperation(void *) {
 	// Load the controller parameter
 	mSetting = load_controller_parameter();
 
 	bool orientationIsLocked = true;
 	applyGuidance = false;
-	double dT = 50;			// ms
+	double dT = 100;		// ms
 	double Ts = dT / 1000;	// s
 	double hapticPos[6];
 	float  robotPos[6];
@@ -666,7 +668,7 @@ void thread_simTeleoperation(void *) {
 		haptic.getPosition(hapticPos);
 		dataPos pos = yrc.read_cartesianPos(0);
 		//WacohRead(robotForce);
-		gravity_compensation(pos, global_robot_force, Fcal);
+		//gravity_compensation(pos, global_robot_force, Fcal);
 
 		// Get robot position and acceleration:
 		Xr		<< pos.X, pos.Y, pos.Z;
@@ -682,7 +684,6 @@ void thread_simTeleoperation(void *) {
 		MatrixXd param_stiffness = getDiagMatrix(Vector3d(stiffness_val, stiffness_val, stiffness_val));
 		MatrixXd param_damping = getDiagMatrix(Vector3d(0.0004, 0.0004, 0.0004));
 		MatrixXd param_impedance = getDiagMatrix(Vector3d(0.02, 0.02, 0.02));
-
 
 		if (wacoh_isConnected == false) Fe.setZero();
 		
@@ -849,6 +850,145 @@ double low_pass_filter(double x, double prev_y, double alpha) {
 
 
 
+
+
+
+
+
+
+
+
+
+// -- Teleoperation Method 1 - Default --
+void thread_simTeleoperation_default(void*) {
+	// Load the controller parameter
+	mSetting = load_controller_parameter();
+
+	bool orientationIsLocked = true;
+	applyGuidance = false;
+	double dT = 100;		// ms
+	double Ts = dT / 1000;	// s
+	double hapticPos[6];
+	float  robotPos[6];
+	float  robotForce[6];
+	float  Fcal[6];
+	Vector3d Xr, Xh, Xs, Xm, Xs0, Xh0, Xcs;
+	Vector3d Xr_rot, Xh_rot, Xcs_rot;
+	Vector3d Xm_vel, Xs_vel, Xm_prev, prev_Xr, Xr_prev, prev_Xh;
+	Vector3d Fcs, Fcm, Fe, Fext, prev_Fe;
+	Vector3d master_position_control;
+	Vector3d master_force_control;
+	Vector3d master_sum_integral;
+	Vector3d slave_position_control;
+	Vector3d slave_force_control;
+	Vector3d slave_force_integral;
+	Vector3d FeFiltered, prev_FeFiltered;
+	Vector3d Taue;
+	Vector3d refPosError, last_refPosError, derivativeRefPosError;
+
+	//Set initial value
+	prev_Xh.setZero();
+	prev_Xr.setZero();
+	Xm_prev.setZero();
+	Xr_prev.setZero();
+	prev_Fe.setZero();
+	master_sum_integral.setZero();
+	slave_force_integral.setZero();
+	prev_FeFiltered.setZero();
+	last_refPosError.setZero();
+
+	get_parameter_config();
+
+	cout << "\nStart teleoperation...\n";
+	while (haptic_jog_mode) {
+		// Get position and force data of the robot and haptic device
+		haptic.getPosition(hapticPos);
+		dataPos pos = yrc.read_cartesianPos(0);
+
+		// Get robot position and acceleration:
+		Xr << pos.X, pos.Y, pos.Z;
+		Xr_rot << pos.W, pos.P, pos.R;
+		Xh << hapticPos[0], hapticPos[1], hapticPos[2];
+		Xh_rot << hapticPos[3], hapticPos[4], hapticPos[5];
+		Fe << Fcal[0], Fcal[1], Fcal[2];
+		Taue << Fcal[3], Fcal[4], Fcal[5];
+		Xm_vel = (Xh - prev_Xh) / Ts;
+		Xs_vel = (Xr - prev_Xr) / Ts;
+
+		Param param = mSetting;
+		MatrixXd param_stiffness = getDiagMatrix(Vector3d(stiffness_val, stiffness_val, stiffness_val));
+		MatrixXd param_damping = getDiagMatrix(Vector3d(0.0004, 0.0004, 0.0004));
+		MatrixXd param_impedance = getDiagMatrix(Vector3d(0.02, 0.02, 0.02));
+
+		if (wacoh_isConnected == false) Fe.setZero();
+
+		// Check button state
+		int haptic_button = haptic.getButtonState();
+		if (haptic_button == 2) {
+			Sleep(300);
+			if (teleoperationIsActive == false) {
+				teleoperationIsActive = true;
+				Xs0 = Xr;
+				Xh0 = Xh;
+			}
+			else {
+				teleoperationIsActive = false;
+				setHapticForces(Vector3d(0, 0, 0));
+			}
+		}
+		else if (haptic_button == 1) {
+			Sleep(300);
+			if (orientationIsLocked == false) {
+				orientationIsLocked = true;
+			}
+			else {
+				orientationIsLocked = false;
+			}
+		}
+
+		// Start teleoperation
+		if (teleoperationIsActive) {
+			// Teleoperation Control:
+			Xm = Xs0 + (Xh - Xh0);		// Master robot position
+			Xs = Xr;					// Slave  robot position
+
+			double Km, Bm, Ks, Bs;
+
+			Km = 0.05;
+			Bm = 0.00015;
+
+			Ks = 0.2;
+			Bs = 0.00025;
+
+			// -- Compute the master teleoperation controller --
+			Fcm = ((Xs - Xm) * Km) + ((Xs_vel - Xm_vel) * Bm);
+			Fcs = ((Xm - Xs) * Ks) + ((Xm_vel - Xs_vel) * Bs);
+
+			// Output of the slave Cartesian Controller:
+			Xcs = Xs + Fcs;
+
+			// Action controller
+			setHapticForces(Fcm);
+			if (orientationIsLocked) Xcs_rot = Xr_rot;
+			else Xcs_rot = Xh_rot;
+			setRobotPosition(Xcs, Xcs_rot);
+
+			haptic_feedback_force = Fcm;
+		}
+
+		// Print data preview:
+		printf("General Teleoperation Method: Fcs = %.2f, %.2f, %.2f \n", Fcs[0], Fcs[1], Fcs[2]);
+
+		// update the (t - 1) variables for next iteration:
+		prev_Xh = Xh;
+		prev_Xr = Xr;
+		prev_Fe = Fe;
+		prev_FeFiltered = FeFiltered;
+		last_refPosError = refPosError;
+		Sleep(dT); // Sampling rate
+	}
+
+}
 
 // -- Teleoperation Method 2 --
 // ///////////////////////////////////////////////////////////////////////

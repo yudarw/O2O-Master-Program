@@ -155,6 +155,8 @@ extern void load_origin_data();
 extern void thread_simTeleoperation(void *);
 extern void thread_simTeleoperation_2(void *);
 extern void thread_simTeleoperation_3(void *);
+extern void thread_simTeleoperation_default(void*);
+
 extern void thread_update_robot_data(void *);
 extern void gravity_compensation(dataPos pos, float __Fe[6], float __Fm[6]);
 extern void setHapticForces(Vector3d fh);

@@ -191,7 +191,8 @@ void MainForm::btn_haptic_teleoperation() {
 
 		// Default Mode
 		if (teleoperation_method == 0)
-			_beginthread(thread_simTeleoperation, 0, NULL);
+			_beginthread(thread_simTeleoperation_default, 0, NULL);
+			
 
 		else if (teleoperation_method == 1)
 			_beginthread(thread_simTeleoperation_2, 0, NULL);
@@ -860,7 +861,7 @@ void MainForm::btn_initDevice() {
 		}
 	}
 
-	 
+	 /*
 	// Connect the force sensor
 	if (!wacoh_isConnected) {
 		if (serial_connect(serialComPort) == -1) {
@@ -872,6 +873,7 @@ void MainForm::btn_initDevice() {
 			);
 		}
 	}
+	*/
 
 	// Activate the thread update data:
 	//_beginthread(thread_update_robot_data, 0, NULL);
