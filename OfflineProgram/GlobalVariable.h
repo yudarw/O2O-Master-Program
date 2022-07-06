@@ -85,7 +85,7 @@ extern Yaskawa		yrc;
 extern OpenHaptic	haptic;
 extern Fanuc		roboguide;
 extern int selected_robot;
-extern CoppeliaSim		sim;
+extern CoppeliaSim		mSim;
 extern CoppeliaRobot	ur10;
 
 

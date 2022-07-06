@@ -464,7 +464,7 @@ void MainForm::btn_print() {
 
 // -- Delete program line --
 void MainForm::btn_sequence_delete() {
-	if (dataGridView1->RowCount > 0) {
+	if (dataGridView1->RowCount > 1) {
 		dataGridView1->Rows->RemoveAt(tab.index);
 		tab.program_data.erase(tab.program_data.begin() + tab.index);
 		int n = dataGridView1->RowCount;

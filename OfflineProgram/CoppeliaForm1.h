@@ -70,6 +70,15 @@ namespace OfflineProgram {
 
 	private: System::Windows::Forms::Button^  button6;
 	private: System::Windows::Forms::Button^  button7;
+	private: System::Windows::Forms::TrackBar^ trackBar_X;
+	private: System::Windows::Forms::TrackBar^ trackBar_Y;
+	private: System::Windows::Forms::TrackBar^ trackBar_Z;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::RadioButton^ radioButton1;
+	private: System::Windows::Forms::RadioButton^ radioButton2;
+	private: System::Windows::Forms::Button^ button8;
 	protected:
 
 	private:
@@ -106,31 +115,43 @@ namespace OfflineProgram {
 			this->tbX = (gcnew System::Windows::Forms::TextBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
+			this->trackBar_X = (gcnew System::Windows::Forms::TrackBar());
+			this->trackBar_Y = (gcnew System::Windows::Forms::TrackBar());
+			this->trackBar_Z = (gcnew System::Windows::Forms::TrackBar());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
+			this->button8 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar_X))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar_Y))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar_Z))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(12, 12);
+			this->button1->Location = System::Drawing::Point(16, 276);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->Size = System::Drawing::Size(135, 23);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Connect";
+			this->button1->Text = L"CoppeliaSim Connect";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &CoppeliaForm::button1_Click);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(93, 17);
+			this->label1->Location = System::Drawing::Point(163, 281);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(35, 13);
+			this->label1->Size = System::Drawing::Size(73, 13);
 			this->label1->TabIndex = 1;
-			this->label1->Text = L"label1";
+			this->label1->Text = L"Disconnected";
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(290, 239);
+			this->button2->Location = System::Drawing::Point(281, 190);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(154, 23);
 			this->button2->TabIndex = 2;
@@ -140,7 +161,7 @@ namespace OfflineProgram {
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(290, 210);
+			this->button3->Location = System::Drawing::Point(281, 161);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(154, 23);
 			this->button3->TabIndex = 3;
@@ -150,7 +171,7 @@ namespace OfflineProgram {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(290, 181);
+			this->button4->Location = System::Drawing::Point(281, 132);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(154, 23);
 			this->button4->TabIndex = 4;
@@ -160,7 +181,7 @@ namespace OfflineProgram {
 			// 
 			// button5
 			// 
-			this->button5->Location = System::Drawing::Point(290, 100);
+			this->button5->Location = System::Drawing::Point(281, 51);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(154, 23);
 			this->button5->TabIndex = 5;
@@ -298,7 +319,7 @@ namespace OfflineProgram {
 			// 
 			// button7
 			// 
-			this->button7->Location = System::Drawing::Point(290, 17);
+			this->button7->Location = System::Drawing::Point(16, 12);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(154, 23);
 			this->button7->TabIndex = 19;
@@ -306,11 +327,109 @@ namespace OfflineProgram {
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &CoppeliaForm::button7_Click);
 			// 
+			// trackBar_X
+			// 
+			this->trackBar_X->Location = System::Drawing::Point(36, 319);
+			this->trackBar_X->Maximum = 100;
+			this->trackBar_X->Name = L"trackBar_X";
+			this->trackBar_X->Size = System::Drawing::Size(234, 45);
+			this->trackBar_X->TabIndex = 20;
+			this->trackBar_X->Value = 50;
+			this->trackBar_X->Scroll += gcnew System::EventHandler(this, &CoppeliaForm::trackBar_X_Scroll);
+			// 
+			// trackBar_Y
+			// 
+			this->trackBar_Y->Location = System::Drawing::Point(36, 359);
+			this->trackBar_Y->Maximum = 100;
+			this->trackBar_Y->Name = L"trackBar_Y";
+			this->trackBar_Y->Size = System::Drawing::Size(234, 45);
+			this->trackBar_Y->TabIndex = 21;
+			this->trackBar_Y->Value = 50;
+			this->trackBar_Y->Scroll += gcnew System::EventHandler(this, &CoppeliaForm::trackBar_Y_Scroll);
+			// 
+			// trackBar_Z
+			// 
+			this->trackBar_Z->Location = System::Drawing::Point(36, 399);
+			this->trackBar_Z->Maximum = 100;
+			this->trackBar_Z->Name = L"trackBar_Z";
+			this->trackBar_Z->Size = System::Drawing::Size(234, 45);
+			this->trackBar_Z->TabIndex = 22;
+			this->trackBar_Z->Value = 50;
+			this->trackBar_Z->Scroll += gcnew System::EventHandler(this, &CoppeliaForm::trackBar_Z_Scroll);
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(18, 399);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(14, 13);
+			this->label8->TabIndex = 21;
+			this->label8->Text = L"Z";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Location = System::Drawing::Point(18, 359);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(14, 13);
+			this->label9->TabIndex = 20;
+			this->label9->Text = L"Y";
+			// 
+			// label10
+			// 
+			this->label10->AutoSize = true;
+			this->label10->Location = System::Drawing::Point(18, 319);
+			this->label10->Name = L"label10";
+			this->label10->Size = System::Drawing::Size(14, 13);
+			this->label10->TabIndex = 19;
+			this->label10->Text = L"X";
+			// 
+			// radioButton1
+			// 
+			this->radioButton1->AutoSize = true;
+			this->radioButton1->Location = System::Drawing::Point(296, 319);
+			this->radioButton1->Name = L"radioButton1";
+			this->radioButton1->Size = System::Drawing::Size(98, 17);
+			this->radioButton1->TabIndex = 23;
+			this->radioButton1->TabStop = true;
+			this->radioButton1->Text = L"Position Control";
+			this->radioButton1->UseVisualStyleBackColor = true;
+			// 
+			// radioButton2
+			// 
+			this->radioButton2->AutoSize = true;
+			this->radioButton2->Location = System::Drawing::Point(296, 342);
+			this->radioButton2->Name = L"radioButton2";
+			this->radioButton2->Size = System::Drawing::Size(112, 17);
+			this->radioButton2->TabIndex = 24;
+			this->radioButton2->TabStop = true;
+			this->radioButton2->Text = L"Orientation Control";
+			this->radioButton2->UseVisualStyleBackColor = true;
+			// 
+			// button8
+			// 
+			this->button8->Location = System::Drawing::Point(300, 399);
+			this->button8->Name = L"button8";
+			this->button8->Size = System::Drawing::Size(135, 23);
+			this->button8->TabIndex = 25;
+			this->button8->Text = L"Set Center";
+			this->button8->UseVisualStyleBackColor = true;
+			this->button8->Click += gcnew System::EventHandler(this, &CoppeliaForm::button8_Click);
+			// 
 			// CoppeliaForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(456, 274);
+			this->ClientSize = System::Drawing::Size(456, 449);
+			this->Controls->Add(this->button8);
+			this->Controls->Add(this->radioButton2);
+			this->Controls->Add(this->radioButton1);
+			this->Controls->Add(this->label8);
+			this->Controls->Add(this->label9);
+			this->Controls->Add(this->label10);
+			this->Controls->Add(this->trackBar_Z);
+			this->Controls->Add(this->trackBar_Y);
+			this->Controls->Add(this->trackBar_X);
 			this->Controls->Add(this->button7);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->button5);
@@ -324,12 +443,23 @@ namespace OfflineProgram {
 			this->Load += gcnew System::EventHandler(this, &CoppeliaForm::CoppeliaForm_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar_X))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar_Y))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->trackBar_Z))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
+	public:
+		void on_init();
+		void slider_x();
+		void slider_y();
+		void slider_z();
+		void btn_set_center();
+
 	private: System::Void CoppeliaForm_Load(System::Object^  sender, System::EventArgs^  e) {
+		on_init();
 	}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		coppelia_connect();
@@ -340,17 +470,29 @@ namespace OfflineProgram {
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 		btn_tcp_calibration();
 	}
-private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-	btn_test_program();
-}
-private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
-	btn_test_calibration();
-}
-private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
-	btn_roboguide_connect();
-}
-private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
-	btn_record_center_user_frame();
+	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+		btn_test_program();
+	}
+	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+		btn_test_calibration();
+	}
+	private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
+		btn_roboguide_connect();
+	}
+	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+		btn_record_center_user_frame();
+	}
+	private: System::Void trackBar_X_Scroll(System::Object^ sender, System::EventArgs^ e) {
+		slider_x();
+	}
+	private: System::Void trackBar_Y_Scroll(System::Object^ sender, System::EventArgs^ e) {
+		slider_y();
+	}
+	private: System::Void trackBar_Z_Scroll(System::Object^ sender, System::EventArgs^ e) {
+		slider_z();
+	}
+private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e) {
+	btn_set_center();
 }
 };
 }

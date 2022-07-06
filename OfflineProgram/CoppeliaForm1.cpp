@@ -1,4 +1,5 @@
 #include "CoppeliaForm1.h"
+#include "GlobalVariable.h"
 
 using namespace System;
 using namespace System::Windows;
@@ -10,9 +11,23 @@ void coppeliasim_teleoperation(void *);
 void tool_calibration(float pos[6], float new_pos[6]);
 
 void CoppeliaForm::coppelia_connect(){
-	bool state = sim.connect(19999);
+
+	// Connect to coppeliasim
+	if (mSim.connect(19997)) {
+		mSim.startSimulation();
+	}
+	else {
+		printf("ERROR: Coppeliasim Connection Failed! \n");
+	}
+	
+	ur10.init();
+	Sleep(100);
+	ur10.readPosition(ur10_pos);
+	printf("Robot position = %.3f,%.3f,%.3f,%.3f,%.3f,%.3f \n", ur10_pos[0], ur10_pos[1], ur10_pos[2], ur10_pos[3], ur10_pos[4], ur10_pos[5]);
+	label1->Text = "Connected";
+/*
 	if (state) {
-		ur10.init("UR10");
+		ur10.init();
 		Sleep(100);
 		ur10.readPosition(ur10_pos);
 		printf("\nCoppeliaSim Connection Success!!! \n");
@@ -22,6 +37,7 @@ void CoppeliaForm::coppelia_connect(){
 	if (!haptic.connected) {
 		haptic.init();
 	}
+	*/
 }
 
 void CoppeliaForm::start_teleoperation() {
@@ -411,4 +427,58 @@ void generate_trajectory() {
 	for (int i = 0; i < ref_pos.size(); i++) {
 		printf("Trajectory=%.3f,%.3f,%.3f\n", ref_pos[i].X, ref_pos[i].Y, ref_pos[i].Z);
 	}
+}
+
+
+float diff[3] = {0, 0, 0};
+float start_val = 50;
+float cur_val;
+float cmdPos[6];
+
+void CoppeliaForm::on_init() {
+	radioButton1->Checked = true;
+}
+
+void CoppeliaForm::btn_set_center() {
+	ur10.readPosition(goal_pos);
+}
+
+void CoppeliaForm::slider_x() {
+	cur_val = Convert::ToDouble(trackBar_X->Value);
+	diff[0] = cur_val - start_val;
+	
+	for (int i = 0; i < 6; i++) cmdPos[i] = goal_pos[i];
+
+	if (radioButton1->Checked)
+		cmdPos[0] = goal_pos[0] - diff[0] * 3;
+	else
+		cmdPos[3] = goal_pos[3] - diff[0];
+
+	ur10.setPosition(cmdPos, false);
+}
+
+void CoppeliaForm::slider_y() {
+	cur_val = Convert::ToDouble(trackBar_Y->Value);
+	diff[1] = cur_val - start_val;
+
+	for (int i = 0; i < 6; i++) cmdPos[i] = goal_pos[i];
+
+	if (radioButton1->Checked)
+		cmdPos[1] = goal_pos[1] - diff[1] * 3;
+	else
+		cmdPos[4] = goal_pos[4] - diff[1];
+	ur10.setPosition(cmdPos, false);
+}
+
+void CoppeliaForm::slider_z() {
+	cur_val = Convert::ToDouble(trackBar_Z->Value);
+	diff[2] = cur_val - start_val;
+
+	for (int i = 0; i < 6; i++) cmdPos[i] = goal_pos[i];
+
+	if (radioButton1->Checked)
+		cmdPos[2] = goal_pos[2] - diff[2] * 3;
+	else
+		cmdPos[5] = goal_pos[5] - diff[2];
+	ur10.setPosition(cmdPos, false);
 }

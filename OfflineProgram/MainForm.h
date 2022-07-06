@@ -214,7 +214,7 @@ private: System::Windows::Forms::GroupBox^  groupBox11;
 
 
 private: System::Windows::Forms::GroupBox^  groupBox9;
-private: System::Windows::Forms::Button^  button29;
+
 private: System::Windows::Forms::Button^  button38;
 private: System::Windows::Forms::Button^  btnServo;
 private: System::Windows::Forms::GroupBox^  groupBox12;
@@ -484,7 +484,6 @@ protected:
 			this->groupBox9 = (gcnew System::Windows::Forms::GroupBox());
 			this->button36 = (gcnew System::Windows::Forms::Button());
 			this->button35 = (gcnew System::Windows::Forms::Button());
-			this->button29 = (gcnew System::Windows::Forms::Button());
 			this->button38 = (gcnew System::Windows::Forms::Button());
 			this->btnServo = (gcnew System::Windows::Forms::Button());
 			this->button27 = (gcnew System::Windows::Forms::Button());
@@ -571,7 +570,7 @@ protected:
 			this->tabPage1->Location = System::Drawing::Point(4, 39);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(930, 606);
+			this->tabPage1->Size = System::Drawing::Size(937, 606);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Program";
 			this->tabPage1->UseVisualStyleBackColor = true;
@@ -1043,7 +1042,7 @@ protected:
 			this->tabPage2->Location = System::Drawing::Point(4, 39);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(930, 606);
+			this->tabPage2->Size = System::Drawing::Size(937, 606);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Trajectory";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -1487,17 +1486,19 @@ protected:
 			// 
 			// button42
 			// 
-			this->button42->Location = System::Drawing::Point(11, 133);
+			this->button42->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button42.Image")));
+			this->button42->Location = System::Drawing::Point(263, 29);
 			this->button42->Name = L"button42";
-			this->button42->Size = System::Drawing::Size(120, 20);
+			this->button42->Size = System::Drawing::Size(139, 40);
 			this->button42->TabIndex = 4;
 			this->button42->Text = L"Coopelia Sim";
+			this->button42->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageBeforeText;
 			this->button42->UseVisualStyleBackColor = true;
 			this->button42->Click += gcnew System::EventHandler(this, &MainForm::button42_Click);
 			// 
 			// button11
 			// 
-			this->button11->Location = System::Drawing::Point(11, 88);
+			this->button11->Location = System::Drawing::Point(137, 29);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(120, 40);
 			this->button11->TabIndex = 3;
@@ -1517,9 +1518,14 @@ protected:
 			// 
 			// groupBox11
 			// 
+			this->groupBox11->Controls->Add(this->button36);
 			this->groupBox11->Controls->Add(this->button43);
+			this->groupBox11->Controls->Add(this->button35);
 			this->groupBox11->Controls->Add(this->button41);
 			this->groupBox11->Controls->Add(this->button22);
+			this->groupBox11->Controls->Add(this->button38);
+			this->groupBox11->Controls->Add(this->btnServo);
+			this->groupBox11->Controls->Add(this->button9);
 			this->groupBox11->Location = System::Drawing::Point(750, 3);
 			this->groupBox11->Name = L"groupBox11";
 			this->groupBox11->Size = System::Drawing::Size(171, 593);
@@ -1533,7 +1539,7 @@ protected:
 			this->button43->ForeColor = System::Drawing::Color::Black;
 			this->button43->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button43.Image")));
 			this->button43->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button43->Location = System::Drawing::Point(26, 172);
+			this->button43->Location = System::Drawing::Point(26, 165);
 			this->button43->Name = L"button43";
 			this->button43->Size = System::Drawing::Size(125, 62);
 			this->button43->TabIndex = 16;
@@ -1548,7 +1554,7 @@ protected:
 			this->button41->ForeColor = System::Drawing::Color::Black;
 			this->button41->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button41.Image")));
 			this->button41->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button41->Location = System::Drawing::Point(26, 105);
+			this->button41->Location = System::Drawing::Point(26, 97);
 			this->button41->Name = L"button41";
 			this->button41->Size = System::Drawing::Size(125, 62);
 			this->button41->TabIndex = 15;
@@ -1574,14 +1580,8 @@ protected:
 			// 
 			// groupBox9
 			// 
-			this->groupBox9->Controls->Add(this->button36);
-			this->groupBox9->Controls->Add(this->button35);
-			this->groupBox9->Controls->Add(this->button29);
-			this->groupBox9->Controls->Add(this->button38);
-			this->groupBox9->Controls->Add(this->btnServo);
 			this->groupBox9->Controls->Add(this->button27);
 			this->groupBox9->Controls->Add(this->button28);
-			this->groupBox9->Controls->Add(this->button9);
 			this->groupBox9->Location = System::Drawing::Point(10, 3);
 			this->groupBox9->Name = L"groupBox9";
 			this->groupBox9->Size = System::Drawing::Size(155, 593);
@@ -1594,7 +1594,7 @@ protected:
 			this->button36->BackColor = System::Drawing::SystemColors::ControlLight;
 			this->button36->ForeColor = System::Drawing::Color::Black;
 			this->button36->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button36.Image")));
-			this->button36->Location = System::Drawing::Point(14, 426);
+			this->button36->Location = System::Drawing::Point(26, 505);
 			this->button36->Name = L"button36";
 			this->button36->Size = System::Drawing::Size(125, 62);
 			this->button36->TabIndex = 22;
@@ -1609,7 +1609,7 @@ protected:
 			this->button35->ForeColor = System::Drawing::Color::Black;
 			this->button35->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button35.Image")));
 			this->button35->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button35->Location = System::Drawing::Point(14, 493);
+			this->button35->Location = System::Drawing::Point(26, 437);
 			this->button35->Name = L"button35";
 			this->button35->Size = System::Drawing::Size(125, 62);
 			this->button35->TabIndex = 21;
@@ -1618,27 +1618,13 @@ protected:
 			this->button35->UseVisualStyleBackColor = false;
 			this->button35->Click += gcnew System::EventHandler(this, &MainForm::button35_Click);
 			// 
-			// button29
-			// 
-			this->button29->BackColor = System::Drawing::SystemColors::ControlLight;
-			this->button29->ForeColor = System::Drawing::Color::Black;
-			this->button29->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button29.Image")));
-			this->button29->Location = System::Drawing::Point(14, 358);
-			this->button29->Name = L"button29";
-			this->button29->Size = System::Drawing::Size(125, 62);
-			this->button29->TabIndex = 20;
-			this->button29->Text = L"Show Graph";
-			this->button29->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			this->button29->UseVisualStyleBackColor = false;
-			this->button29->Click += gcnew System::EventHandler(this, &MainForm::button29_Click_1);
-			// 
 			// button38
 			// 
 			this->button38->BackColor = System::Drawing::Color::Transparent;
 			this->button38->ForeColor = System::Drawing::Color::Black;
 			this->button38->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button38.Image")));
 			this->button38->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button38->Location = System::Drawing::Point(14, 223);
+			this->button38->Location = System::Drawing::Point(26, 301);
 			this->button38->Name = L"button38";
 			this->button38->Size = System::Drawing::Size(125, 62);
 			this->button38->TabIndex = 18;
@@ -1653,7 +1639,7 @@ protected:
 			this->btnServo->ForeColor = System::Drawing::Color::Black;
 			this->btnServo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnServo.Image")));
 			this->btnServo->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->btnServo->Location = System::Drawing::Point(14, 155);
+			this->btnServo->Location = System::Drawing::Point(26, 233);
 			this->btnServo->Name = L"btnServo";
 			this->btnServo->Size = System::Drawing::Size(125, 62);
 			this->btnServo->TabIndex = 17;
@@ -1698,7 +1684,7 @@ protected:
 			this->button9->ForeColor = System::Drawing::Color::Black;
 			this->button9->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button9.Image")));
 			this->button9->ImageAlign = System::Drawing::ContentAlignment::TopCenter;
-			this->button9->Location = System::Drawing::Point(14, 290);
+			this->button9->Location = System::Drawing::Point(26, 369);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(125, 62);
 			this->button9->TabIndex = 13;
@@ -1840,6 +1826,7 @@ protected:
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::Black;
+			this->panel1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->panel1->Controls->Add(this->indicator_alarm);
 			this->panel1->Controls->Add(this->label3);
 			this->panel1->Controls->Add(this->label2);

@@ -3,8 +3,8 @@
 Yaskawa			yrc;
 Fanuc			roboguide;
 OpenHaptic		haptic;
-CoppeliaSim		sim;
-CoppeliaRobot	ur10;
+CoppeliaSim		mSim;
+CoppeliaRobot	ur10 ("/UR10");
 
 int selected_robot = 0;
 
