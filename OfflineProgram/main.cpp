@@ -874,6 +874,7 @@ void thread_simTeleoperation_default(void*) {
 	float  Fcal[6];
 	Vector3d Xr, Xh, Xs, Xm, Xs0, Xh0, Xcs;
 	Vector3d Xr_rot, Xh_rot, Xcs_rot;
+	Vector3d Xs_refOri, Xh_refOri;
 	Vector3d Xm_vel, Xs_vel, Xm_prev, prev_Xr, Xr_prev, prev_Xh;
 	Vector3d Fcs, Fcm, Fe, Fext, prev_Fe;
 	Vector3d master_position_control;
@@ -940,6 +941,8 @@ void thread_simTeleoperation_default(void*) {
 			Sleep(300);
 			if (orientationIsLocked == false) {
 				orientationIsLocked = true;
+				Xs_refOri = Xr;
+				Xh_refOri = Xh;
 			}
 			else {
 				orientationIsLocked = false;
@@ -967,17 +970,26 @@ void thread_simTeleoperation_default(void*) {
 			// Output of the slave Cartesian Controller:
 			Xcs = Xs + Fcs;
 
-			// Action controller
-			setHapticForces(Fcm);
-			if (orientationIsLocked) Xcs_rot = Xr_rot;
-			else Xcs_rot = Xh_rot;
-			setRobotPosition(Xcs, Xcs_rot);
+			// Orientation Lock: The orientation is the same with current robot orientation
+			if (orientationIsLocked) { 
+				Xcs_rot = Xr_rot; 
+				setHapticForces(Fcm);
+				setRobotPosition(Xcs, Xcs_rot);
+			}
+			else {
+				// Displacement of the haptic
+				Vector3d posShift = Xh - Xh_refOri;
+				printf("Position shift: %.2f  %.2f  %.2f \n", posShift[0], posShift[1], posShift[2]);
+				Xcs_rot = Xh_rot;
+				setHapticForces(Fcm);
+				setRobotPosition(Xcs, Xcs_rot);
+			}
 
 			haptic_feedback_force = Fcm;
 		}
 
 		// Print data preview:
-		printf("General Teleoperation Method: Fcs = %.2f, %.2f, %.2f \n", Fcs[0], Fcs[1], Fcs[2]);
+		//printf("General Teleoperation Method: Fcs = %.2f, %.2f, %.2f \n", Fcs[0], Fcs[1], Fcs[2]);
 
 		// update the (t - 1) variables for next iteration:
 		prev_Xh = Xh;
