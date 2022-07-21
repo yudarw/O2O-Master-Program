@@ -221,12 +221,13 @@ void Yaskawa::SVON()
 		printf("> Servo ON failed! Robot is not connected! \n");
 		return;
 	}
+	
 	read_state();
 	if (status[m_Remote] == 0) {
 		printf("> Error: Select the mode to remote mode. \n");
 		return;
 	}
-
+	
 	char pRecv[512];
 	send_command("HOSTCTRL_REQUEST SVON 2\r\n", pRecv);
 	send_command("1\r\n", pRecv);

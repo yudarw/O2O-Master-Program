@@ -1354,11 +1354,11 @@ void run_trajectory(void *) {
 	}
 	trajectoryIsRunning = false;
 
-	dataPos start_pos = arrayToDatapos(standby_pos);
-	yrc.moveL(start_pos, 90, true);
+	//dataPos start_pos = arrayToDatapos(standby_pos);
+	//yrc.moveL(start_pos, 90, true);
 	//dataPos cmd_pos = arrayToDatapos(home_pos);
 	//yrc.moveL(cmd_pos, 90, true);
-	yrc.SVOFF();
+	//yrc.SVOFF();
 }
 
 void sequence_run_trajectory(string path, double speed, int wait) {

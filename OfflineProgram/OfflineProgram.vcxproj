@@ -282,6 +282,10 @@
   <ItemGroup>
     <ResourceCompile Include="OfflineProgram.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Image File\mechanical-arm.png" />
+    <None Include="bitmap1.bmp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
