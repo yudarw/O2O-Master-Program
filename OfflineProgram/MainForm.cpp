@@ -49,8 +49,8 @@ void MainForm::on_init() {
 	yrc.global_pos.P = 000.040;
 	yrc.global_pos.R = -60.321;
 	// Initialize the selected device
-	selected_robot = YASKAWA;
-	//selected_robot = ROBOGUIDE;
+	//selected_robot = YASKAWA;
+	selected_robot = ROBOGUIDE;
 	load_origin_data();
 
 	// -- Update Haptic Mode Selection --
