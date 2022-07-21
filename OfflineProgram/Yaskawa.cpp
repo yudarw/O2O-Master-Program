@@ -524,21 +524,28 @@ void Yaskawa::writeIO() {
 	int data2 = 8;
 	int data3 = 54;
 
+	/*
 	// Set Data String:
 	//sprintf(temp, "%i,%i,%i\r", data1, data2,data3);
-	sprintf(temp, "%d,%d,%d\r", data1, data2, data3);
-	//sprintf(temp, "27010,24,1,2,3\r");
+	//sprintf(temp, "%i,%i,%i\r", data1, data2, data3);
+	sprintf(temp, "27010,24,1,2,3\r");
 	strData = string(temp);
-	cout << strData << " Data Length: " << strData.length() << endl;
-	sprintf(temp, "HOSTCTRL_REQUEST IOWRITE 15\r", strData.length());
+	//cout << strData.c_str() << "Data Length: " << strData.length() << endl;
+	sprintf(temp, "HOSTCTRL_REQUEST IOWRITE %d\r", strData.length());
 	strCommand = string(temp);
 	cout << strCommand << endl;
 	send_command(str2char(strCommand), pRecv);
-	send_command(str2char(strData), pRecv);
+	send_command("27010,24,1,2,3\r", pRecv);
 
 	printf("> Write IO test: ");
 	printf(pRecv);
 	printf("\n");
+	*/
+
+
+	char pRecv[512];
+	send_command("HOSTCTRL_REQUEST IOWRITE 10\r\n", pRecv);
+	send_command("27010,8,3\r\n", pRecv);
 }
 
 
@@ -697,7 +704,7 @@ void Yaskawa::job_start()
 	string  strData;
 	string	strCommand;
 
-	sprintf(temp,"REMOTEAPI\r");		// Name of the project in pendant : DEF -> TES_IO_CONNECTION
+	sprintf(temp,"IO_CONTROL_JOB\r");		// Name of the project in pendant : DEF -> TES_IO_CONNECTION
 	strData = string(temp);
 	sprintf(temp, "HOSTCTRL_REQUEST START %i\r", strData.length());
 	strCommand = string(temp);
