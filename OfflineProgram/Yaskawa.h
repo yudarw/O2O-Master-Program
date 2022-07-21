@@ -71,7 +71,7 @@ public:
 	void	read_state();
 	void	waitMoving(dataPos pos);
 	void	read_IO();
-	void	writeIO();
+	void	writeIO(int io_number, int val);
 	void	set_posReg(int num, dataPos pos);
 	void	set_varByte(int num, int val);
 	void	set_varInt(int num, int val);

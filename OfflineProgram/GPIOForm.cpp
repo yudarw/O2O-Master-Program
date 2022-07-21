@@ -17,7 +17,7 @@ void GPIOForm::write_io_ON() {
 	port_number = Convert::ToInt16(tb_port_number->Text);
 	val = Convert::ToInt16(tb_val->Text);
 	printf("Write GPIO -> ON   Port Num:%d    Value:%d \n", port_number, val);
-	yrc.writeIO();
+	yrc.writeIO(port_number, val);
 }
 
 void GPIOForm::write_io_OFF() {
