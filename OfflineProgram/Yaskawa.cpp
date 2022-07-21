@@ -515,37 +515,18 @@ void Yaskawa::read_IO() {
 	printf(pRecv);
 }
 
-void Yaskawa::writeIO() {
-	char	temp[512];
+void Yaskawa::writeIO(int io_number, int val ) {
+	char	temp[256];
 	string  strData;
 	string	strCommand;
 
-	int data1 = 27010;
-	int data2 = 8;
-	int data3 = 54;
-
-	/*
-	// Set Data String:
-	//sprintf(temp, "%i,%i,%i\r", data1, data2,data3);
-	//sprintf(temp, "%i,%i,%i\r", data1, data2, data3);
-	sprintf(temp, "27010,24,1,2,3\r");
+	sprintf(temp, "%i,%i,%i\r\n", io_number, 8, val);
 	strData = string(temp);
-	//cout << strData.c_str() << "Data Length: " << strData.length() << endl;
-	sprintf(temp, "HOSTCTRL_REQUEST IOWRITE %d\r", strData.length());
+	sprintf(temp, "HOSTCTRL_REQUEST IOWRITE %i\r\n", strData.length());
 	strCommand = string(temp);
-	cout << strCommand << endl;
+
 	send_command(str2char(strCommand), pRecv);
-	send_command("27010,24,1,2,3\r", pRecv);
-
-	printf("> Write IO test: ");
-	printf(pRecv);
-	printf("\n");
-	*/
-
-
-	char pRecv[512];
-	send_command("HOSTCTRL_REQUEST IOWRITE 10\r\n", pRecv);
-	send_command("27010,8,3\r\n", pRecv);
+	send_command(str2char(strData), pRecv);
 }
 
 

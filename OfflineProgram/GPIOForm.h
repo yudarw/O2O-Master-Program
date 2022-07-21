@@ -55,13 +55,15 @@ namespace OfflineProgram {
 
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label1;
-	private: System::Windows::Forms::NumericUpDown^  tb_port_number;
+
 	private: System::Windows::Forms::Button^  btn_read;
 
 
 	private: System::Windows::Forms::TextBox^  tb_val_write;
 
 	private: System::Windows::Forms::Label^  label5;
+	private: System::Windows::Forms::TextBox^ tb_port_number;
+
 
 
 	protected:
@@ -79,7 +81,7 @@ namespace OfflineProgram {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(GPIOForm::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GPIOForm::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->btn_read = (gcnew System::Windows::Forms::Button());
@@ -95,11 +97,10 @@ namespace OfflineProgram {
 			this->tb_val = (gcnew System::Windows::Forms::TextBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->tb_port_number = (gcnew System::Windows::Forms::NumericUpDown());
+			this->tb_port_number = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->tb_portnum_write))->BeginInit();
 			this->groupBox2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->tb_port_number))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -231,12 +232,12 @@ namespace OfflineProgram {
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->Controls->Add(this->tb_port_number);
 			this->groupBox2->Controls->Add(this->tb_val);
 			this->groupBox2->Controls->Add(this->btn_on);
 			this->groupBox2->Controls->Add(this->label2);
 			this->groupBox2->Controls->Add(this->btn_off);
 			this->groupBox2->Controls->Add(this->label1);
-			this->groupBox2->Controls->Add(this->tb_port_number);
 			this->groupBox2->Location = System::Drawing::Point(12, 12);
 			this->groupBox2->Name = L"groupBox2";
 			this->groupBox2->Size = System::Drawing::Size(236, 153);
@@ -273,12 +274,11 @@ namespace OfflineProgram {
 			// 
 			// tb_port_number
 			// 
-			this->tb_port_number->Font = (gcnew System::Drawing::Font(L"Courier New", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->tb_port_number->Location = System::Drawing::Point(147, 32);
+			this->tb_port_number->Location = System::Drawing::Point(147, 34);
 			this->tb_port_number->Name = L"tb_port_number";
-			this->tb_port_number->Size = System::Drawing::Size(72, 23);
-			this->tb_port_number->TabIndex = 10;
+			this->tb_port_number->Size = System::Drawing::Size(56, 21);
+			this->tb_port_number->TabIndex = 14;
+			this->tb_port_number->Text = L"27010";
 			this->tb_port_number->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
 			// GPIOForm
@@ -301,7 +301,6 @@ namespace OfflineProgram {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->tb_portnum_write))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->tb_port_number))->EndInit();
 			this->ResumeLayout(false);
 
 		}
