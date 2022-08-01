@@ -168,6 +168,8 @@ extern void thread_run_sequence_program(void *);
 extern void run_trajectory(void *);
 extern dataPos arrayToDatapos(double pos[6]);
 
+extern bool orientationIsLocked;
+//Sung-chi
 
 // -- Sequence Programming --
 extern string program_file_name;

@@ -122,6 +122,7 @@ namespace OfflineProgram {
 			this->comboTeleMethod->Name = L"comboTeleMethod";
 			this->comboTeleMethod->Size = System::Drawing::Size(289, 26);
 			this->comboTeleMethod->TabIndex = 1;
+			this->comboTeleMethod->SelectedIndexChanged += gcnew System::EventHandler(this, &HapticSettingForm::comboTeleMethod_SelectedIndexChanged);
 			// 
 			// button1
 			// 
@@ -233,6 +234,8 @@ private: System::Void trackBar2_Scroll(System::Object^  sender, System::EventArg
 }
 private: System::Void HapticSettingForm_Load(System::Object^  sender, System::EventArgs^  e) {
 	on_init();
+}
+private: System::Void comboTeleMethod_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

@@ -487,7 +487,7 @@ void Yaskawa::read_IO() {
 	string  strData;
 	string	strCommand;
 
-	int data1 = 10010;
+	int data1 = 50010;
 	int data2 = 8;
 
 	/*
@@ -516,6 +516,7 @@ void Yaskawa::read_IO() {
 	printf(pRecv);
 }
 
+	//write(27320, 200)
 void Yaskawa::writeIO(int io_number, int val ) {
 	char	temp[256];
 	string  strData;

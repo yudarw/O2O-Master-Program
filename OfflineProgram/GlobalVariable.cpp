@@ -55,3 +55,5 @@ int load_sequence_program(string filepath);
 Vector3d haptic_feedback_force;
 
 bool program_isRunning = false;
+
+bool orientationIsLocked = true;

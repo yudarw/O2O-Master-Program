@@ -98,6 +98,15 @@ void MainForm::on_timer() {
 		rg_trigger_state = roboguide.read_sdo(1);
 	}
 
+	if (orientationIsLocked) {
+		haptic_orientation->BackColor = System::Drawing::Color::Lime;
+		haptic_orientation->Text = "Orientation locked";
+	}
+	else {
+		haptic_orientation->BackColor = System::Drawing::Color::Red;
+		haptic_orientation->Text = "Orientation unlocked";
+	}
+
 	if (trajectoryIsRunning) {
 		if (tab2.selected_index > 1) {
 			dataGridView2->Rows[tab2.selected_index - 1]->Selected = false;
@@ -171,6 +180,7 @@ void MainForm::show_robot_status_form(){
 // -- Button Haptic Teleoperation Clicked --
 void MainForm::btn_haptic_teleoperation() {
 	
+
 	btn_resetConnection();
 	
 	if (!yrc.isConnected) {
@@ -210,8 +220,8 @@ void MainForm::btn_haptic_teleoperation() {
 
 void MainForm::btn_run_trajectory() {
 
-	_beginthread(run_trajectory, 0, NULL);
-	return;
+	//_beginthread(run_trajectory, 0, NULL);
+	//return;
 
 	// If the selected robot is Roboguide:
 	if (selected_robot == ROBOGUIDE) {
@@ -754,6 +764,28 @@ void MainForm::btn_move_to_next() {
 	if (tab2.selected_index < tab2.total_index) tab2.selected_index++;
 	dataPos pos = ConvertToDataPos(tab2.data[tab2.selected_index]);
 	yrc.moveL(pos, 30);
+
+	// =====================================
+	/*
+	pos_t pos;
+	DataPos rgPos;
+	int max, i;
+	roboguide.refresh();
+	roboguide.read_currentPos();
+
+	rgPos = roboguide.current_pos;
+
+	rgPos.X = pos.X;
+	rgPos.Y = pos.Y;
+	rgPos.Z = pos.Z;
+	rgPos.W = pos.W;
+	rgPos.P = pos.P;
+	rgPos.R = pos.R;
+
+	roboguide.moveL(rgPos, 100, CNT);
+	*/
+	// ========================================
+
 	printf("> Move to position [%d] \n", tab2.selected_index);
 }
 

@@ -997,8 +997,10 @@ void thread_simTeleoperation_default(void*) {
 		prev_Fe = Fe;
 		prev_FeFiltered = FeFiltered;
 		last_refPosError = refPosError;
-		Sleep(dT); // Sampling rate
+		Sleep(dT); // Sampling rate->Text
 	}
+
+
 
 }
 

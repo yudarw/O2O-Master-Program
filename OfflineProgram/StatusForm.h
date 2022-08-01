@@ -100,6 +100,8 @@ namespace OfflineProgram {
 	private: System::Windows::Forms::Label^  label24;
 	private: System::Windows::Forms::TextBox^  tbHposR;
 
+	
+
 	private: System::Windows::Forms::Label^  label25;
 	private: System::Windows::Forms::TextBox^  tbHposZ;
 
